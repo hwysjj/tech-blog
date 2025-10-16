@@ -9,16 +9,16 @@ import {
 } from '@react-pdf/renderer';
 import type { ResumeData } from '../data/resumeData';
 
-// Register Chinese fonts for proper display
+// Register Chinese fonts from local files for better compatibility
 Font.register({
-  family: 'Noto Sans SC',
+  family: 'Source Han Sans CN',
   fonts: [
     {
-      src: 'https://fonts.gstatic.com/s/notosanssc/v36/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.ttf',
+      src: '/fonts/SourceHanSansCN-Regular.ttf',
       fontWeight: 'normal',
     },
     {
-      src: 'https://fonts.gstatic.com/s/notosanssc/v36/k3k6o84MPvpLmixcA63oeALZJtiZw-Jn4w.ttf',
+      src: '/fonts/SourceHanSansCN-Bold.ttf',
       fontWeight: 'bold',
     },
   ],
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   page: {
     padding: 40,
     fontSize: 10,
-    fontFamily: 'Noto Sans SC',
+    fontFamily: 'Source Han Sans CN',
   },
   header: {
     marginBottom: 20,
