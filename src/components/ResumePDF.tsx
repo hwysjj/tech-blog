@@ -5,21 +5,30 @@ import {
   View,
   StyleSheet,
   Link,
+  Font,
 } from '@react-pdf/renderer';
 import type { ResumeData } from '../data/resumeData';
 
-// Register fonts for better Chinese support (optional)
-// import { Font } from '@react-pdf/renderer';
-// Font.register({
-//   family: 'Noto Sans SC',
-//   src: 'https://fonts.gstatic.com/s/notosanssc/v12/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.ttf',
-// });
+// Register Chinese fonts for proper display
+Font.register({
+  family: 'Noto Sans SC',
+  fonts: [
+    {
+      src: 'https://fonts.gstatic.com/s/notosanssc/v36/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.ttf',
+      fontWeight: 'normal',
+    },
+    {
+      src: 'https://fonts.gstatic.com/s/notosanssc/v36/k3k6o84MPvpLmixcA63oeALZJtiZw-Jn4w.ttf',
+      fontWeight: 'bold',
+    },
+  ],
+});
 
 const styles = StyleSheet.create({
   page: {
     padding: 40,
     fontSize: 10,
-    fontFamily: 'Helvetica',
+    fontFamily: 'Noto Sans SC',
   },
   header: {
     marginBottom: 20,
