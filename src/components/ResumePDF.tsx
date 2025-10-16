@@ -26,6 +26,15 @@ Font.register({
   ],
 });
 
+// Allow proper wrapping for CJK text blocks inside PDF paragraphs
+Font.registerHyphenationCallback((word) => {
+  if (!word) return [];
+  if (/[\u4e00-\u9fff]/.test(word)) {
+    return word.split('');
+  }
+  return [word];
+});
+
 const colors = {
   primary: resumeTheme.colors.primary,
   sidebarBg: resumeTheme.colors.sidebarBg,
@@ -102,7 +111,8 @@ const styles = StyleSheet.create({
   // 主体内容样式
   main: {
     flex: 1,
-    padding: 30,
+    maxWidth: 595 - resumeTheme.pdf.sidebarWidth,
+    padding: '30 25 30 25',
     backgroundColor: 'white',
   },
   jobIntention: {
@@ -152,6 +162,11 @@ const styles = StyleSheet.create({
     marginBottom: 3,
     textAlign: 'justify',
   },
+  summaryText: {
+    fontSize: 8.5,
+    lineHeight: 1.5,
+    color: colors.textPrimary,
+  },
   bulletList: {
     marginLeft: 10,
     marginTop: 3,
@@ -192,7 +207,13 @@ const styles = StyleSheet.create({
   },
   card: {
     marginBottom: 10,
-    padding: 8,
+    padding: '6 8',
+    backgroundColor: '#fafafa',
+    borderRadius: 4,
+  },
+  summaryCard: {
+    marginBottom: 10,
+    padding: '6 8',
     backgroundColor: '#fafafa',
     borderRadius: 4,
   },
@@ -385,8 +406,8 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           {/* 个人简介 */}
           <View style={{ marginBottom: 15 }}>
             <Text style={styles.sectionTitle}>{t.personalSummary}</Text>
-            <View style={styles.card}>
-              <Text style={styles.bodyText}>{data.personalSummary}</Text>
+            <View style={styles.summaryCard}>
+              <Text style={styles.summaryText}>{data.personalSummary}</Text>
             </View>
           </View>
 
