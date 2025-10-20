@@ -352,21 +352,6 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
 
           <View style={styles.sidebarDivider} />
 
-          {/* 技能 */}
-          <View style={styles.sidebarSection}>
-            <Text style={styles.sidebarSectionTitle}>{t.skills}</Text>
-            {data.skills.map((skillGroup, index) => (
-              <View key={index} style={{ marginBottom: 6 }}>
-                <Text style={styles.skillCategory}>{skillGroup.category}</Text>
-                {skillGroup.items.map((skill, i) => (
-                  <Text key={i} style={styles.skillItem}>• {skill}</Text>
-                ))}
-              </View>
-            ))}
-          </View>
-
-          <View style={styles.sidebarDivider} />
-
           {/* 语言能力 */}
           <View style={styles.sidebarSection}>
             <Text style={styles.sidebarSectionTitle}>{t.languages}</Text>
@@ -380,17 +365,35 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
 
           <View style={styles.sidebarDivider} />
 
-          {/* 证书 */}
+          {/* 技能 */}
           <View style={styles.sidebarSection}>
-            <Text style={styles.sidebarSectionTitle}>{t.certificates}</Text>
-            {data.certificates.map((cert, index) => (
-              <View key={index} style={{ marginBottom: 5 }}>
-                <Text style={styles.skillCategory}>{cert.name}</Text>
-                <Text style={styles.sidebarText}>{cert.issuer}</Text>
-                <Text style={styles.sidebarText}>{cert.date}</Text>
+            <Text style={styles.sidebarSectionTitle}>{t.skills}</Text>
+            {data.skills.map((skillGroup, index) => (
+              <View key={index} style={{ marginBottom: 6 }}>
+                <Text style={styles.skillCategory}>{skillGroup.category}</Text>
+                {skillGroup.items.map((skill, i) => (
+                  <Text key={i} style={styles.skillItem}>• {skill}</Text>
+                ))}
               </View>
             ))}
           </View>
+
+          {/* 证书 */}
+          {data.certificates.length > 0 && (
+            <>
+              <View style={styles.sidebarDivider} />
+              <View style={styles.sidebarSection}>
+                <Text style={styles.sidebarSectionTitle}>{t.certificates}</Text>
+                {data.certificates.map((cert, index) => (
+                  <View key={index} style={{ marginBottom: 5 }}>
+                    <Text style={styles.skillCategory}>{cert.name}</Text>
+                    <Text style={styles.sidebarText}>{cert.issuer}</Text>
+                    <Text style={styles.sidebarText}>{cert.date}</Text>
+                  </View>
+                ))}
+              </View>
+            </>
+          )}
         </View>
 
         {/* 右侧主体内容 */}
@@ -533,41 +536,46 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                   </View>
                 </View>
 
-                <View>
-                  <Text style={styles.labelBold}>{t.highlights}:</Text>
-                  <View style={styles.bulletList}>
-                    {project.highlights.map((highlight, i) => (
-                      <View key={i} style={styles.bulletItem}>
-                        <Text style={styles.bullet}>•</Text>
-                        <Text style={styles.bulletText}>{highlight}</Text>
-                      </View>
-                    ))}
+                {project.highlights && project.highlights.length > 0 && (
+                  <View>
+                    <Text style={styles.labelBold}>{t.highlights}:</Text>
+                    <View style={styles.bulletList}>
+                      {project.highlights.map((highlight, i) => (
+                        <View key={i} style={styles.bulletItem}>
+                          <Text style={styles.bullet}>•</Text>
+                          <Text style={styles.bulletText}>{highlight}</Text>
+                        </View>
+                      ))}
+                    </View>
                   </View>
-                </View>
+                )}
               </View>
             ))}
           </View>
-
-          <View style={styles.divider} />
 
           {/* 获奖经历 */}
-          <View>
-            <Text style={styles.sectionTitle}>{t.awards}</Text>
-            {data.awards.map((award, index) => (
-              <View key={index} style={styles.card}>
-                <View style={styles.subsectionHeader}>
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.subsectionTitle}>
-                      {award.name}
-                      {award.level && <Text style={styles.badge}> {award.level}</Text>}
-                    </Text>
-                    <Text style={styles.subsectionSubtitle}>{award.issuer}</Text>
+          {data.awards.length > 0 && (
+            <>
+              <View style={styles.divider} />
+              <View>
+                <Text style={styles.sectionTitle}>{t.awards}</Text>
+                {data.awards.map((award, index) => (
+                  <View key={index} style={styles.card}>
+                    <View style={styles.subsectionHeader}>
+                      <View style={{ flex: 1 }}>
+                        <Text style={styles.subsectionTitle}>
+                          {award.name}
+                          {award.level && <Text style={styles.badge}> {award.level}</Text>}
+                        </Text>
+                        <Text style={styles.subsectionSubtitle}>{award.issuer}</Text>
+                      </View>
+                      <Text style={styles.subsectionDate}>{award.date}</Text>
+                    </View>
                   </View>
-                  <Text style={styles.subsectionDate}>{award.date}</Text>
-                </View>
+                ))}
               </View>
-            ))}
-          </View>
+            </>
+          )}
         </View>
       </Page>
     </Document>

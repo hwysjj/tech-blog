@@ -269,6 +269,28 @@ const Resume = () => {
 
       <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.2)' }} />
 
+      {/* 语言能力 */}
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <LanguageIcon fontSize="small" />
+          {t.languages}
+        </Typography>
+        <Stack spacing={1.5}>
+          {data.languages.map((lang, index) => (
+            <Box key={index}>
+              <Typography variant="body2" sx={{ fontWeight: 'bold', color: resumeTheme.colors.primary }}>
+                {lang.name}
+              </Typography>
+              <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
+                {lang.level}
+              </Typography>
+            </Box>
+          ))}
+        </Stack>
+      </Box>
+
+      <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.2)' }} />
+
       {/* 技能 */}
       <Box sx={{ mb: 3 }}>
         <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -300,52 +322,33 @@ const Resume = () => {
         </Stack>
       </Box>
 
-      <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.2)' }} />
-
-      {/* 语言能力 */}
-      <Box sx={{ mb: 3 }}>
-        <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
-          <LanguageIcon fontSize="small" />
-          {t.languages}
-        </Typography>
-        <Stack spacing={1.5}>
-          {data.languages.map((lang, index) => (
-            <Box key={index}>
-              <Typography variant="body2" sx={{ fontWeight: 'bold', color: resumeTheme.colors.primary }}>
-                {lang.name}
-              </Typography>
-              <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
-                {lang.level}
-              </Typography>
-            </Box>
-          ))}
-        </Stack>
-      </Box>
-
-      <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.2)' }} />
-
       {/* 证书 */}
-      <Box>
-        <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
-          <CardMembership fontSize="small" />
-          {t.certificates}
-        </Typography>
-        <Stack spacing={2}>
-          {data.certificates.map((cert, index) => (
-            <Box key={index}>
-              <Typography variant="body2" sx={{ fontWeight: 'bold', color: resumeTheme.colors.primary }}>
-                {cert.name}
-              </Typography>
-              <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
-                {cert.issuer}
-              </Typography>
-              <Typography variant="body2" sx={{ opacity: 0.7, fontSize: '0.75rem' }}>
-                {cert.date}
-              </Typography>
-            </Box>
-          ))}
-        </Stack>
-      </Box>
+      {data.certificates.length > 0 && (
+        <>
+          <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.2)' }} />
+          <Box>
+            <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CardMembership fontSize="small" />
+              {t.certificates}
+            </Typography>
+            <Stack spacing={2}>
+              {data.certificates.map((cert, index) => (
+                <Box key={index}>
+                  <Typography variant="body2" sx={{ fontWeight: 'bold', color: resumeTheme.colors.primary }}>
+                    {cert.name}
+                  </Typography>
+                  <Typography variant="body2" sx={{ opacity: 0.9, fontSize: '0.85rem' }}>
+                    {cert.issuer}
+                  </Typography>
+                  <Typography variant="body2" sx={{ opacity: 0.7, fontSize: '0.75rem' }}>
+                    {cert.date}
+                  </Typography>
+                </Box>
+              ))}
+            </Stack>
+          </Box>
+        </>
+      )}
     </Box>
   );
 
@@ -598,72 +601,77 @@ const Resume = () => {
                   </Box>
                 </Box>
 
-                <Box>
-                  <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1, color: resumeTheme.colors.primary }}>
-                    {t.highlights}:
-                  </Typography>
-                  <ul style={{ margin: 0, paddingLeft: '20px' }}>
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i}>
-                        <Typography variant="body2" sx={{ lineHeight: 1.6 }}>{highlight}</Typography>
-                      </li>
-                    ))}
-                  </ul>
-                </Box>
+                {project.highlights && project.highlights.length > 0 && (
+                  <Box>
+                    <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1, color: resumeTheme.colors.primary }}>
+                      {t.highlights}:
+                    </Typography>
+                    <ul style={{ margin: 0, paddingLeft: '20px' }}>
+                      {project.highlights.map((highlight, i) => (
+                        <li key={i}>
+                          <Typography variant="body2" sx={{ lineHeight: 1.6 }}>{highlight}</Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  </Box>
+                )}
               </CardContent>
             </Card>
           ))}
         </Stack>
       </Box>
-
-      <Divider sx={{ my: 3 }} />
 
       {/* 获奖经历 */}
-      <Box>
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 'bold',
-            color: resumeTheme.colors.primary,
-            mb: 2,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 1,
-          }}
-        >
-          <EmojiEvents />
-          {t.awards}
-        </Typography>
-        <Stack spacing={2}>
-          {data.awards.map((award, index) => (
-            <Card key={index} elevation={1}>
-              <CardContent>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-                  <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                      {award.name}
-                      {award.level && (
-                        <Chip
-                          label={award.level}
-                          size="small"
-                          color="success"
-                          sx={{ ml: 1, fontSize: '0.7rem' }}
-                        />
-                      )}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {award.issuer}
-                    </Typography>
-                  </Box>
-                  <Typography variant="body2" color="text.secondary" sx={{ mt: isMobile ? 1 : 0 }}>
-                    {award.date}
-                  </Typography>
-                </Box>
-              </CardContent>
-            </Card>
-          ))}
-        </Stack>
-      </Box>
+      {data.awards.length > 0 && (
+        <>
+          <Divider sx={{ my: 3 }} />
+          <Box>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 'bold',
+                color: resumeTheme.colors.primary,
+                mb: 2,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <EmojiEvents />
+              {t.awards}
+            </Typography>
+            <Stack spacing={2}>
+              {data.awards.map((award, index) => (
+                <Card key={index} elevation={1}>
+                  <CardContent>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+                      <Box sx={{ flex: 1 }}>
+                        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                          {award.name}
+                          {award.level && (
+                            <Chip
+                              label={award.level}
+                              size="small"
+                              color="success"
+                              sx={{ ml: 1, fontSize: '0.7rem' }}
+                            />
+                          )}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {award.issuer}
+                        </Typography>
+                      </Box>
+                      <Typography variant="body2" color="text.secondary" sx={{ mt: isMobile ? 1 : 0 }}>
+                        {award.date}
+                      </Typography>
+                    </Box>
+                  </CardContent>
+                </Card>
+              ))}
+            </Stack>
+          </Box>
+        </>
+      )}
     </Box>
   );
 

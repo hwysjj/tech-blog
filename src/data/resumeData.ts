@@ -117,10 +117,10 @@ export const resumeDataZh: ResumeData = {
   },
 
   // 求职意向
-  jobIntention: '高级前端工程师 / .Net / 全栈工程师',
+  jobIntention: ' Web前端 / .Net / 全栈工程师',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `具有5年前端开发经验，精通React、Vue、Angular等主流框架。目前在读工程管理硕士，研究方向为大数据商务分析。曾在字节跳动、腾讯等头部互联网公司工作，负责多个千万级用户产品的前端架构设计与开发。擅长性能优化、工程化建设和团队协作。热衷于技术分享和开源贡献，具备良好的学习能力和问题解决能力。`,
+  personalSummary: `具有10年多的软件前后端开发经验，精通React、Angular、AngularJS等主流框架，后端熟悉C#，NodeJS, Python等语言。注重代码质量与自动化流程建设，推动开发效率与交付稳定性持续提升。热衷于技术交流，具备良好的学习能力和问题解决能力。并具备良好的英语听说读写能力。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -135,6 +135,7 @@ export const resumeDataZh: ResumeData = {
       expectedGraduation: '2026.01',
       researchDirection: '大数据商务分析',
       gpa: '',
+      honors: ['学科总成绩班级第一，专业年级前三'],
     },
     {
       degree: '本科',
@@ -144,55 +145,35 @@ export const resumeDataZh: ResumeData = {
       location: '徐州',
       period: '2009.09 - 2013.07',
       gpa: '',
-      honors: ['优秀毕业设计', '院长奖学金', '苏北数学建模竞赛二等奖'],
+      honors: ['优秀毕业设计', '院长奖学金', '苏北数学建模竞赛二等奖', '学习优秀奖', '担任主要学生干部职务'],
     },
   ],
 
   // 工作经历
   workExperience: [
     {
-      position: '软件工程师主管',
-      company: '碧点（上海）软件技术有限公司',
-      location: '上海',
-      period: '2021.04 - 至今',
-      responsibilities: [
-        '负责公司核心产品的前端架构设计与开发',
-        '带领 5 人前端团队完成多个重要项目',
-        '优化应用性能，首屏加载时间减少 40%',
-      ],
-      achievements: [
-        '成功重构遗留系统，代码可维护性提升 60%',
-        '主导建立前端工程化体系和代码规范',
-      ],
-    },
-    {
-      position: '高级软件开发工程师',
+      position: '软件开发工程师主管',
       company: '碧点（上海）软件技术有限公司',
       location: '上海',
       period: '2015.03 - 至今',
       responsibilities: [
-        '负责公司核心产品的前端架构设计与开发',
-        '带领 5 人前端团队完成多个重要项目',
-        '优化应用性能，首屏加载时间减少 40%',
-      ],
-      achievements: [
-        '成功重构遗留系统，代码可维护性提升 60%',
-        '主导建立前端工程化体系和代码规范',
+        '职位晋升：软件开发工程师（2015.03 - 2018.02）→ 高级软件开发工程师（2018.03 - 2021.03）→ 软件工程师主管（2021.04 - 至今）',
+        '和美国团队技术leader一起主导Web前端从0到1搭建Whitelabel Web平台，主要采用Angular/React + .NET + TypeScript技术栈，为公司建立统一的Web前端BaaS平台，支持新业务快速扩展和旧业务平滑迁移',
+        '主导Walmart和GD两大合作伙伴从旧系统向BaaS平台的前端迁移，负责迁移计划制定、技术架构设计和实施落地。Walmart项目已成功上线，为数千万用户提供更敏捷、高质量的金融服务体验',
+        '担任Google reCAPTCHA项目Tech Leader，主导前后端全栈开发，覆盖公司大部分Web和Mobile应用的多个业务流程。提出创新技术方案，通过智能触发机制减少不必要的API调用，为公司降低70%的reCAPTCHA月度成本',
+        '负责多个Web网站的日常维护和技术升级，涉及.NET、AngularJS、Angular等技术栈。为某些项目从0搭建Jenkins CI/CD流程，显著提升前端部署效率和发布质量',
+        '需求讨论、技术选型、系统设计、代码编写、生产测试问题解决等工作',
+        '参与Web前端技术面试，和新员工培训工作'
       ],
     },
     {
-      position: '前端工程师',
-      company: '腾讯',
-      location: '深圳',
-      period: '2020.07 - 2022.05',
+      position: '.Net软件工程师',
+      company: '麻州信息技术（上海）有限公司',
+      location: '上海',
+      period: '2013.08 - 2015.07',
       responsibilities: [
-        '参与企业级 Web 应用开发',
-        '实现响应式设计和跨浏览器兼容',
-        '编写单元测试和 E2E 测试',
-      ],
-      achievements: [
-        '开发的组件库被多个团队采用',
-        '获得年度优秀员工奖',
+        '基于.Net的美国众筹项目， 负责该项目从0-1的全栈开发（web前端+C#后端，开始共3人发展到后来数十人）',
+        '基于angularjs+.Net的云协作项目， 负责Web前端模块的开发与维护',
       ],
     },
   ],
@@ -200,27 +181,71 @@ export const resumeDataZh: ResumeData = {
   // 项目经验
   projects: [
     {
-      name: '企业级管理系统',
-      role: '前端技术负责人',
-      period: '2023.01 - 2023.08',
-      description: '为大型企业客户开发的 SaaS 管理平台，支持权限管理、数据分析等功能',
-      technologies: ['React 18', 'TypeScript', 'Material-UI', 'Redux Toolkit', 'React Query'],
+      name: 'Walmart/Greedot Migration',
+      role: 'Web前端技术负责人',
+      period: '2024.02 - 现在',
+      description: '把Walmart和Greedot这两个系统从旧系统迁移到公司最新的BaaS平台，我负责主导Web前端的迁移工作。',
+      technologies: ['ReactJS 18', 'Angular', 'TypeScript', 'Karma', 'Jest', 'MUI', 'Webpack', '.Net', 'TeamCity', 'Git', 'Azure FrontDoor'],
       highlights: [
-        '系统支持 10000+ 并发用户',
-        '实现微前端架构，支持模块独立部署',
-        '建立完整的 CI/CD 流程',
+        '主导Web前端从onprem服务器迁移到了Azure Cloud，实现同一个域名同时支持新老系统，并解决了迁移过程中遇到的各种技术难题，例如旧系统不支持IPV6，新老系统URL冲突等问题。',
+        '实现同代码多租户架构，通过路由与配置隔离机制，使不同产品用户自动访问对应云端环境。',
+        'UT覆盖率达到80%以上，确保系统稳定可靠',
       ],
     },
     {
-      name: '移动端电商应用',
-      role: '核心开发者',
-      period: '2021.06 - 2021.12',
-      description: '开发高性能移动端电商应用，提供流畅的购物体验',
-      technologies: ['React Native', 'TypeScript', 'Redux', 'Jest'],
+      name: 'BaaS项目',
+      role: 'Web前端技术负责',
+      period: '2021.06 - 2022.12',
+      description: '构建全新从0-1的BaaS（Banking-as-a-service） whitelabel平台，支持公司未来多个新业务的快速上线和旧业务的平滑迁移。我和美国的前端开发leader一起主导构建Web前端系统架构，以及平台上所有功能的实现，包含公司银行系统的几乎所有功能。',
+      technologies: ['ReactJS 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jest', 'MUI', 'Webpack', '.Net', 'TeamCity', 'Git'],
       highlights: [
-        '应用下载量超过 100 万',
-        '用户评分 4.8/5.0',
-        '实现购物车、支付等核心功能',
+        '使用微前端架构设计，实现各个模块的独立部署和升级',
+        '实现项目 100% 可配置化架构，支持不同 Brand/Partner 使用同一代码基线满足差异化业务需求，动态加载品牌主题、图片与文案，大幅提升开发效率并显著加快业务 Onboarding 速度。',
+        '实现公司银行产品的所有核心功能模块，包括用户注册、登录、账户管理、转账支付、交易明细等功能',
+      ],
+    },
+    {
+      name: 'Google ReCaptcha',
+      role: 'Tech Lead',
+      period: '2023.06 - 2024.12',
+      description: '主导公司信息安全部门提出的Google reCAPTCHA安全接入项目，作为Tech Lead兼Web端开发负责人，负责在全公司各Web与App安全敏感流程中集成Google reCAPTCHA，提升整体防攻击与防自动化风险能力。',
+      technologies: ['ReactJS 18', 'Angular', 'TypeScript', '.Net', 'Web API', 'TeamCity', 'Git'],
+      highlights: [
+        '提出以及实施one time token机制, 以进一步提高系统安全性',
+        '提出基于IP Audit + IOvation的触发机制减少不必要的API调用，为公司降低70%的reCAPTCHA月度成本',
+      ],
+    },
+    {
+      name: 'GoBank',
+      role: '核心Web前端开发',
+      period: '2015.08 - 2017.12',
+      description: '基于AngularJS的银行在线项目，我负责项目的功能开发与维护，以及搭建jenkins CI/CD流程。',
+      technologies: ['AngularJS 1.5', 'Jade', 'Stylus', 'Jenkins', 'Perforce', 'Grunt', 'Gulp', 'Git'],
+      highlights: [
+        '搭建Jenkins CI/CD流程，显著提升前端部署效率和发布质量',
+        '基于protractor的前端E2E测试',
+        'grunt构建流程优化(20min -> 2min)',
+        '组件化推广',
+        'ng-router到ui-router的迁移',
+        'angular 1.2升级到angular 1.5'
+      ],
+    },
+    {
+      name: '全携通',
+      role: '核心Web前端开发',
+      period: '2015.08 - 2017.12',
+      description: '全携通支持两种文件分享的方式：模拟现实中组建团队的方式，将不同的人以不同的权限邀请到文件夹中参与协作，从而共享其中的资源，针对写作文件可以发表评论，版本控制；同时支持为文件或文件夹生成可访问的链接进行分享与下载。我负责web前端的功能开发与维护。',
+      technologies: ['AngularJS', 'Bootstrap', 'Less', 'Grunt', 'SVN'],
+      highlights: [
+      ],
+    },
+    {
+      name: 'DreamFund',
+      role: '.Net全栈开发（Web前端+后端）',
+      period: '2013.08 - 2017.12',
+      description: 'DreamFund是一个帮助他人筹集资金完成理想并可以赞助他人梦想的social savings平台，本系统是一个国际化的众筹项目，完成了包括create dream, overview dream, fund dream, withdraw等等模块。我负责web前端的功能开发与维护。',
+      technologies: ['.NET', 'Bootstrap', 'Less', 'JQuery', 'SVN'],
+      highlights: [
       ],
     },
   ],
@@ -237,15 +262,19 @@ export const resumeDataZh: ResumeData = {
     // },
     {
       category: '工程化工具',
-      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm/yarn', 'Git', 'Docker'],
+      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm/yarn', 'Git', 'Perforce', 'Jenkins'],
     },
     {
       category: '测试',
-      items: ['Jest', 'React Testing Library', 'Cypress', 'Vitest'],
+      items: ['Jest', 'Karma', 'Protractor'],
     },
     {
       category: '后端技能',
-      items: ['Node.js', 'Express', '.Net', 'C#', 'Python', 'Java'],
+      items: ['Node.js', '.Net', 'C#', 'Express', 'Python', 'Java'],
+    },
+    {
+      category: 'AI编程相关',
+      items: ['Claude Code', 'Codex', 'Copilot'],
     },
     {
       category: '软技能',
@@ -278,24 +307,6 @@ export const resumeDataZh: ResumeData = {
 
   // 获奖经历
   awards: [
-    {
-      name: '优秀毕业设计',
-      issuer: '南京大学计算机科学与技术系',
-      date: '2020.06',
-      level: '院级',
-    },
-    {
-      name: '院长奖学金',
-      issuer: '南京大学',
-      date: '2019.12',
-      level: '院级',
-    },
-    {
-      name: '苏北数学建模竞赛二等奖',
-      issuer: '江苏省教育厅',
-      date: '2018.11',
-      level: '省级',
-    },
   ],
 };
 
@@ -355,33 +366,20 @@ export const resumeDataEn: ResumeData = {
   // Work Experience
   workExperience: [
     {
-      position: 'Senior Frontend Engineer',
-      company: 'ByteDance',
-      location: 'Beijing',
-      period: 'Jun 2022 - Present',
+      position: 'Software Engineering Manager',
+      company: 'Biopoint (Shanghai) Software Technology Co., Ltd.',
+      location: 'Shanghai',
+      period: 'Mar 2015 - Present',
       responsibilities: [
-        'Lead frontend architecture design and development for core products',
-        'Manage a team of 5 frontend engineers to deliver critical projects',
-        'Optimize application performance, reducing initial load time by 40%',
-      ],
-      achievements: [
-        'Successfully refactored legacy system, improving code maintainability by 60%',
-        'Established frontend engineering standards and code review process',
-      ],
-    },
-    {
-      position: 'Frontend Engineer',
-      company: 'Tencent',
-      location: 'Shenzhen',
-      period: 'Jul 2020 - May 2022',
-      responsibilities: [
-        'Developed enterprise-level web applications',
-        'Implemented responsive design and cross-browser compatibility',
-        'Wrote unit tests and E2E tests',
-      ],
-      achievements: [
-        'Component library adopted by multiple teams',
-        'Received Employee of the Year award',
+        '▸ Career Progression: Software Engineer (Mar 2015 - Feb 2018) → Senior Software Engineer (Mar 2018 - Mar 2021) → Software Engineering Manager (Apr 2021 - Present)',
+        '',
+        'Led a 5-person frontend team to build a White-label Web platform from scratch using Angular/React + .NET + TypeScript stack, establishing unified multi-tenant frontend infrastructure to support rapid business expansion and legacy system migration',
+        '',
+        'Spearheaded frontend migration for two major partners (Walmart & GD) from legacy systems to BaaS platform, responsible for migration planning, technical architecture design, and implementation. Walmart project successfully launched, serving tens of millions of users with more agile and high-quality financial services',
+        '',
+        'Served as Tech Leader for Google reCAPTCHA optimization project, leading full-stack development across all company web and mobile applications. Proposed innovative technical solutions that reduced unnecessary API calls through intelligent trigger mechanisms, cutting reCAPTCHA monthly costs by 70%',
+        '',
+        'Managed maintenance and technical upgrades for dozens of web projects involving .NET, AngularJS, and Angular stacks. Built Jenkins CI/CD pipelines from scratch for multiple legacy projects, significantly improving frontend deployment efficiency and release quality',
       ],
     },
   ],
