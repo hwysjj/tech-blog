@@ -368,7 +368,7 @@ const Resume = () => {
           <Work />
           {t.jobIntention}
         </Typography>
-        <Typography variant="h5" sx={{ color: resumeTheme.colors.textPrimary }}>
+        <Typography variant="h5">
           {data.jobIntention}
         </Typography>
       </Box>
@@ -387,7 +387,7 @@ const Resume = () => {
         >
           {t.personalSummary}
         </Typography>
-        <Card elevation={0} sx={{ backgroundColor: resumeTheme.colors.cardBg }}>
+        <Card elevation={1}>
           <CardContent>
             <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: 'justify' }}>
               {data.personalSummary}
@@ -420,7 +420,7 @@ const Resume = () => {
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', mb: 1 }}>
                   <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: resumeTheme.colors.textPrimary }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                       {edu.degree}
                       {edu.isInProgress && (
                         <Chip
@@ -462,7 +462,7 @@ const Resume = () => {
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                       {edu.honors.map((honor, i) => (
-                        <Chip key={i} label={honor} size="small" color="primary" variant="outlined" />
+                        <Chip key={i} label={honor} size="small" color="primary" />
                       ))}
                     </Box>
                   </Box>
@@ -497,7 +497,7 @@ const Resume = () => {
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', mb: 2 }}>
                   <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: resumeTheme.colors.textPrimary }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                       {work.position}
                     </Typography>
                     <Typography variant="body1" color="text.secondary">
@@ -515,7 +515,7 @@ const Resume = () => {
                 </Box>
 
                 <Box sx={{ mb: 1.5 }}>
-                  <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1, color: resumeTheme.colors.textPrimary }}>
+                  <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
                     {t.responsibilities}:
                   </Typography>
                   <ul style={{ margin: 0, paddingLeft: '20px' }}>
@@ -571,7 +571,7 @@ const Resume = () => {
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', mb: 1 }}>
                   <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: resumeTheme.colors.textPrimary }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                       {project.name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -588,7 +588,7 @@ const Resume = () => {
                 </Typography>
 
                 <Box sx={{ mb: 1.5 }}>
-                  <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 0.5, color: resumeTheme.colors.textPrimary }}>
+                  <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 0.5 }}>
                     {t.technologies}:
                   </Typography>
                   <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
@@ -640,7 +640,7 @@ const Resume = () => {
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', color: resumeTheme.colors.textPrimary }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                       {award.name}
                       {award.level && (
                         <Chip
