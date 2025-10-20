@@ -117,7 +117,7 @@ export const resumeDataZh: ResumeData = {
   },
 
   // 求职意向
-  jobIntention: ' Web前端 / .Net / 全栈工程师',
+  jobIntention: ' Web前端 / .NET / 全栈工程师',
 
   // 个人简介/自我评价（150-200字）
   personalSummary: `具有10年多的软件前后端开发经验，精通React、Angular、AngularJS等主流框架，后端熟悉C#，NodeJS, Python等语言。注重代码质量与自动化流程建设，推动开发效率与交付稳定性持续提升。热衷于技术交流，具备良好的学习能力和问题解决能力。并具备良好的英语听说读写能力。`,
@@ -167,13 +167,13 @@ export const resumeDataZh: ResumeData = {
       ],
     },
     {
-      position: '.Net软件工程师',
+      position: '.NET软件工程师',
       company: '麻州信息技术（上海）有限公司',
       location: '上海',
       period: '2013.08 - 2015.07',
       responsibilities: [
-        '基于.Net的美国众筹项目， 负责该项目从0-1的全栈开发（web前端+C#后端，开始共3人发展到后来数十人）',
-        '基于angularjs+.Net的云协作项目， 负责Web前端模块的开发与维护',
+        '基于.NET的美国众筹项目， 负责该项目从0-1的全栈开发（web前端+C#后端，开始共3人发展到后来数十人）',
+        '基于AngularJS+.NET的云协作项目， 负责Web前端模块的开发与维护',
       ],
     },
   ],
@@ -220,7 +220,7 @@ export const resumeDataZh: ResumeData = {
       role: '核心Web前端开发',
       period: '2015.08 - 2017.12',
       description: '基于AngularJS的银行在线项目，我负责项目的功能开发与维护，以及搭建jenkins CI/CD流程。',
-      technologies: ['AngularJS 1.5', 'Jade', 'Stylus', 'Jenkins', 'Perforce', 'Grunt', 'Gulp', 'Git'],
+      technologies: ['AngularJS 1.5', 'Jade', 'Stylus', 'Jenkins', 'Perforce', 'Grunt', 'Gulp', 'Protractor', 'Karma'],
       highlights: [
         '搭建Jenkins CI/CD流程，显著提升前端部署效率和发布质量',
         '基于protractor的前端E2E测试',
@@ -273,7 +273,7 @@ export const resumeDataZh: ResumeData = {
       items: ['Node.js', '.Net', 'C#', 'Express', 'Python', 'Java'],
     },
     {
-      category: 'AI编程相关',
+      category: 'AI复制编程',
       items: ['Claude Code', 'Codex', 'Copilot'],
     },
     {
