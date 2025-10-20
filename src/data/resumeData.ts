@@ -101,23 +101,23 @@ export const resumeDataZh: ResumeData = {
   personalInfo: {
     photo: '/avatar.jpg', // 请将您的照片放在 public/avatar.jpg
     gender: '男',
-    birthDate: '1998年6月15日',
+    birthDate: '1989年11月12日',
     politicalStatus: '中共党员',
   },
 
   // 联系方式
   contact: {
-    name: '张三',
-    email: 'zhangsan@example.com',
-    phone: '+86 138-0000-0000',
-    address: '北京市朝阳区',
+    name: '华文益',
+    email: 'william_cumt@hotmail.com',
+    phone: '+86 185-0215-5866',
+    address: '上海市浦东新区',
     github: 'https://github.com/zhangsan',
-    linkedin: 'https://linkedin.com/in/zhangsan',
-    website: 'https://zhangsan.dev',
+    linkedin: '',
+    website: '',
   },
 
   // 求职意向
-  jobIntention: '高级前端工程师 / 全栈工程师',
+  jobIntention: '高级前端工程师 / .Net / 全栈工程师',
 
   // 个人简介/自我评价（150-200字）
   personalSummary: `具有5年前端开发经验，精通React、Vue、Angular等主流框架。目前在读工程管理硕士，研究方向为大数据商务分析。曾在字节跳动、腾讯等头部互联网公司工作，负责多个千万级用户产品的前端架构设计与开发。擅长性能优化、工程化建设和团队协作。热衷于技术分享和开源贡献，具备良好的学习能力和问题解决能力。`,
@@ -125,36 +125,51 @@ export const resumeDataZh: ResumeData = {
   // 教育背景（硕士在上，本科在下）
   education: [
     {
-      degree: '工程管理硕士',
+      degree: '硕士',
       degreeLevel: '硕士',
       major: '工程管理',
-      school: '清华大学',
-      location: '北京',
+      school: '华东理工大学',
+      location: '上海',
       period: '2023.09 - 2026.01',
       isInProgress: true,
       expectedGraduation: '2026.01',
       researchDirection: '大数据商务分析',
-      gpa: '3.9/4.0',
+      gpa: '',
     },
     {
-      degree: '计算机科学与技术学士',
+      degree: '本科',
       degreeLevel: '本科',
       major: '计算机科学与技术',
-      school: '南京大学',
-      location: '南京',
-      period: '2016.09 - 2020.06',
-      gpa: '3.8/4.0',
-      honors: ['优秀毕业生', '优秀毕业设计', '院长奖学金'],
+      school: '中国矿业大学',
+      location: '徐州',
+      period: '2009.09 - 2013.07',
+      gpa: '',
+      honors: ['优秀毕业设计', '院长奖学金', '苏北数学建模竞赛二等奖'],
     },
   ],
 
   // 工作经历
   workExperience: [
     {
-      position: '高级前端工程师',
-      company: '字节跳动',
-      location: '北京',
-      period: '2022.06 - 至今',
+      position: '软件工程师主管',
+      company: '碧点（上海）软件技术有限公司',
+      location: '上海',
+      period: '2021.04 - 至今',
+      responsibilities: [
+        '负责公司核心产品的前端架构设计与开发',
+        '带领 5 人前端团队完成多个重要项目',
+        '优化应用性能，首屏加载时间减少 40%',
+      ],
+      achievements: [
+        '成功重构遗留系统，代码可维护性提升 60%',
+        '主导建立前端工程化体系和代码规范',
+      ],
+    },
+    {
+      position: '高级软件开发工程师',
+      company: '碧点（上海）软件技术有限公司',
+      location: '上海',
+      period: '2015.03 - 至今',
       responsibilities: [
         '负责公司核心产品的前端架构设计与开发',
         '带领 5 人前端团队完成多个重要项目',
@@ -214,15 +229,15 @@ export const resumeDataZh: ResumeData = {
   skills: [
     {
       category: '前端技术',
-      items: ['React', 'Angular', 'Vue.js', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Sass/Less'],
+      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Sass/Less/Stylus'],
     },
-    {
-      category: '状态管理',
-      items: ['Redux', 'MobX', 'Zustand', 'RxJS', 'React Query'],
-    },
+    // {
+    //   category: '状态管理',
+    //   items: ['Redux', 'MobX', 'Zustand', 'RxJS', 'React Query'],
+    // },
     {
       category: '工程化工具',
-      items: ['Webpack', 'Vite', 'Rollup', 'npm/yarn/pnpm', 'Git', 'Docker'],
+      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm/yarn', 'Git', 'Docker'],
     },
     {
       category: '测试',
@@ -230,7 +245,7 @@ export const resumeDataZh: ResumeData = {
     },
     {
       category: '后端技能',
-      items: ['Node.js', 'Express', 'NestJS', 'MongoDB', 'PostgreSQL'],
+      items: ['Node.js', 'Express', '.Net', 'C#', 'Python', 'Java'],
     },
     {
       category: '软技能',
@@ -248,17 +263,17 @@ export const resumeDataZh: ResumeData = {
 
   // 证书
   certificates: [
-    {
-      name: 'AWS Certified Developer - Associate',
-      issuer: 'Amazon Web Services',
-      date: '2023.05',
-      id: 'AWS-123456',
-    },
-    {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2022.11',
-    },
+    // {
+    //   name: 'AWS Certified Developer - Associate',
+    //   issuer: 'Amazon Web Services',
+    //   date: '2023.05',
+    //   id: 'AWS-123456',
+    // },
+    // {
+    //   name: 'Google Cloud Professional Developer',
+    //   issuer: 'Google Cloud',
+    //   date: '2022.11',
+    // },
   ],
 
   // 获奖经历
