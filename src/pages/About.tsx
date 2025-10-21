@@ -15,9 +15,6 @@ export const About: React.FC = () => {
         <Typography variant="body1" paragraph>
           {t('about.description')}
         </Typography>
-        <Typography variant="body1" paragraph>
-          {t('about.description')}
-        </Typography>
       </Paper>
     </Box>
   );
