@@ -158,7 +158,7 @@ export const resumeDataZh: ResumeData = {
       period: '2015.03 - 至今',
       responsibilities: [
         '晋升轨迹：软件开发工程师（2015.03-2018.02）→ 高级工程师（2018.03-2021.03）→ 主管（2021.04至今）',
-        '与美国技术团队共同主导Whitelabel BaaS平台建设，采用Angular/React + .NET + TypeScript技术栈，支持新业务快速扩展和遗留系统平滑迁移',
+        '与美国技术团队共同主导Whitelabel BaaS平台Web前端的建设，采用Angular/React + .NET + TypeScript技术栈，支持新业务快速扩展和遗留系统平滑迁移',
         '主导Walmart和GD两大合作伙伴的前端系统迁移，成功上线后服务数千万用户，显著提升金融服务的敏捷性和稳定性',
         '担任Google reCAPTCHA项目Tech Leader，通过创新的智能触发机制优化API调用策略，为公司降低70%的月度成本',
         '建立Jenkins CI/CD流程，推动多个遗留项目的自动化部署，显著提升发布效率和代码质量',
@@ -348,13 +348,13 @@ export const resumeDataEn: ResumeData = {
   // Work Experience
   workExperience: [
     {
-      position: 'Software Engineering Manager',
+      position: 'Software Engineering Lead',
       company: 'Biopoint (Shanghai) Software Technology Co., Ltd.',
       location: 'Shanghai',
       period: 'Mar 2015 - Present',
       responsibilities: [
         'Career Progression: Software Engineer (Mar 2015 - Feb 2018) → Senior Engineer (Mar 2018 - Mar 2021) → Manager (Apr 2021 - Present)',
-        'Collaborated with US technical team to lead Whitelabel BaaS platform development using Angular/React + .NET + TypeScript stack, supporting rapid business expansion and legacy system migration',
+        'Collaborated with US technical team to lead Whitelabel BaaS Web Frontend platform development using Angular/React + .NET + TypeScript stack, supporting rapid business expansion and legacy system migration',
         'Led frontend migration for Walmart and GD partners, successfully serving tens of millions of users with significantly improved financial service agility and stability',
         'Served as Tech Leader for Google reCAPTCHA project, optimizing API call strategy through innovative smart trigger mechanism, reducing monthly costs by 70%',
         'Established Jenkins CI/CD pipelines, promoting automated deployment for multiple legacy projects and significantly improving release efficiency and code quality',
