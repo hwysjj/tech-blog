@@ -253,7 +253,7 @@ export const resumeDataZh: ResumeData = {
     // },
     {
       category: '工程化工具',
-      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm/yarn', 'Git', 'Perforce', 'Jenkins'],
+      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm', 'Git', 'Perforce', 'Jenkins'],
     },
     {
       category: '测试',
@@ -455,7 +455,7 @@ export const resumeDataEn: ResumeData = {
     },
     {
       category: 'Engineering Tools',
-      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm/yarn', 'Git', 'Perforce', 'Jenkins'],
+      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm', 'Git', 'Perforce', 'Jenkins'],
     },
     {
       category: 'Testing',
