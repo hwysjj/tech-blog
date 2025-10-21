@@ -170,7 +170,7 @@ export const resumeDataZh: ResumeData = {
       ],
       achievements: [
         '与美国技术团队共同主导 Whitelabel BaaS 平台 Web 前端建设，支持新业务快速扩展与遗留系统平滑迁移',
-        '主导 Walmart 与 GD 合作项目的前端系统迁移，上线后服务数千万用户，显著提升系统稳定性与金融服务的敏捷性',
+        '主导 Walmart 与 Greendot 合作项目的前端系统迁移，上线后服务数千万用户，显著提升系统稳定性与金融服务的敏捷性',
         '担任 Google reCAPTCHA 项目 Tech Lead，通过智能触发机制优化调用策略，为公司降低约 70% 的安全成本',
         '推动多个项目实现自动化构建与部署流程，显著提升发布效率与代码质量',
       ],
@@ -216,7 +216,7 @@ export const resumeDataZh: ResumeData = {
     {
       name: 'Google reCAPTCHA安全优化',
       role: 'Tech Lead',
-      period: '2023.06 - 2024.12',
+      period: '2022.04 - 2023.04',
       description: '主导公司信息安全部门提出的Google reCAPTCHA安全接入项目，作为Tech Lead兼Web端开发负责人，在全公司各Web与App安全敏感流程中集成Google reCAPTCHA。',
       technologies: ['React 18', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
@@ -245,7 +245,7 @@ export const resumeDataZh: ResumeData = {
   skills: [
     {
       category: '前端技术',
-      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Sass/Less/Stylus'],
+      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Material-UI (MUI)', 'Sass/Less/Stylus'],
     },
     // {
     //   category: '状态管理',
@@ -359,7 +359,7 @@ export const resumeDataEn: ResumeData = {
   workExperience: [
     {
       position: 'Software Engineering Lead',
-      company: 'Biopoint (Shanghai) Software Technology Co., Ltd.',
+      company: 'Bidian (Shanghai) Software Technology Co., Ltd.',
       location: 'Shanghai',
       period: 'Mar 2015 - Present',
       responsibilities: [
@@ -376,7 +376,7 @@ export const resumeDataEn: ResumeData = {
       ],
       achievements: [
         'Collaborated with US technical team to lead Whitelabel BaaS platform Web frontend development, supporting rapid business expansion and legacy system migration',
-        'Led frontend system migration for Walmart and GD partnership projects, serving tens of millions of users post-launch, significantly improving system stability and financial service agility',
+        'Led frontend system migration for Walmart and Greendot partnership projects, serving tens of millions of users post-launch, significantly improving system stability and financial service agility',
         'Served as Tech Lead for Google reCAPTCHA project, optimizing call strategy through intelligent trigger mechanism, reducing security costs by approximately 70%',
         'Drove automated build and deployment processes across multiple projects, significantly improving release efficiency and code quality',
       ],
@@ -422,7 +422,7 @@ export const resumeDataEn: ResumeData = {
     {
       name: 'Google reCAPTCHA Security Optimization',
       role: 'Tech Lead',
-      period: 'Jun 2023 - Dec 2024',
+      period: 'Apr 2022 - Apr 2023',
       description: 'Led Google reCAPTCHA security integration project initiated by company security department, serving as Tech Lead and web development lead, integrating Google reCAPTCHA across all company web and app security-sensitive workflows.',
       technologies: ['React 18', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
@@ -451,7 +451,7 @@ export const resumeDataEn: ResumeData = {
   skills: [
     {
       category: 'Frontend Technologies',
-      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Sass/Less/Stylus'],
+      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Material-UI (MUI)', 'Sass/Less/Stylus'],
     },
     {
       category: 'Engineering Tools',
