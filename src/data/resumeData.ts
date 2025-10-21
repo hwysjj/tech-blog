@@ -163,7 +163,7 @@ export const resumeDataZh: ResumeData = {
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
         '通过 RESTful API 集成后端服务，参与部分 .NET WebAPI 接口编写与联调，完善前后端数据交互流程',
         '负责部分 CI/CD 流程建设（Jenkins / TeamCity），支持自动化构建、测试与发布',
-        '建立前端单元测试体系，使用 Jest / Karma 等工具，确保关键模块 UT 覆盖率达 80% 以上',
+        '建立前端单元测试体系，使用 Jest / Jasmine / Karma 等工具，确保关键模块 UT 覆盖率达 80% 以上',
         '作为项目 Web 前端主要沟通与推动负责人，负责跨团队需求澄清、进度跟踪与问题闭环，确保前后端协作顺畅高效',
         '参与代码评审与技术分享，指导新人培训，持续提升团队整体技术能力',
         '负责多个遗留系统的日常维护、性能优化与版本升级，降低技术债务与运维风险',
@@ -194,7 +194,7 @@ export const resumeDataZh: ResumeData = {
       role: 'Web前端技术负责人',
       period: '2024.02 - 现在',
       description: '主导Walmart和Greedot两大金融系统向BaaS平台的Web前端迁移，负责技术选型、架构设计与实施落地。',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
+      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
         '主导Web前端从本地服务器迁移至Azure云端，实现同域名支持新老系统并存，解决IPv6兼容性、URL冲突等技术难题',
         '实现多租户架构，通过路由与配置隔离机制，使不同产品用户自动访问对应云端环境',
@@ -206,7 +206,7 @@ export const resumeDataZh: ResumeData = {
       role: 'Web前端技术负责人',
       period: '2021.06 - 2022.12',
       description: '从0到1构建Banking-as-a-Service Whitelabel平台，与美国团队共同主导Web前端架构设计，实现银行核心功能模块，支持多业务快速上线与遗留系统迁移。',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
+      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
       highlights: [
         '采用微前端架构设计，实现各模块独立部署和升级',
         '实现100%可配置化架构，支持不同品牌/合作伙伴使用同一代码基线满足差异化业务需求，动态加载主题、图片与文案',
@@ -257,7 +257,7 @@ export const resumeDataZh: ResumeData = {
     },
     {
       category: '测试',
-      items: ['Jest', 'Karma', 'Protractor'],
+      items: ['Jest', 'Jasmine', 'Karma', 'Protractor'],
     },
     {
       category: '后端技能',
@@ -369,7 +369,7 @@ export const resumeDataEn: ResumeData = {
         'Drove responsive web development to unify user experience across PC, mobile, and Android / iOS WebView platforms',
         'Integrated backend services via RESTful API, participated in .NET WebAPI development and debugging, optimizing frontend-backend data interaction',
         'Led CI/CD pipeline construction (Jenkins / TeamCity), supporting automated build, testing, and deployment',
-        'Established frontend unit testing framework using Jest / Karma, ensuring 80%+ UT coverage for critical modules',
+        'Established frontend unit testing framework using Jest / Jasmine / Karma, ensuring 80%+ UT coverage for critical modules',
         'Served as primary Web frontend communication and project lead, responsible for cross-team requirement clarification, progress tracking, and issue resolution, ensuring smooth frontend-backend collaboration',
         'Participated in code reviews and technical sharing, mentored new team members, continuously improving overall team capability',
         'Maintained multiple legacy systems including daily maintenance, performance optimization, and version upgrades, reducing technical debt and operational risks',
@@ -400,7 +400,7 @@ export const resumeDataEn: ResumeData = {
       role: 'Frontend Tech Lead',
       period: 'Feb 2024 - Present',
       description: 'Led web frontend migration for Walmart and Greedot financial systems to BaaS platform, responsible for technology selection, architecture design, and implementation.',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
+      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
         'Led web frontend migration from on-premises servers to Azure cloud, enabling coexistence of new and legacy systems under the same domain, solving IPv6 compatibility and URL conflict challenges',
         'Implemented multi-tenant architecture with routing and configuration isolation, enabling automatic access to corresponding cloud environments for different product users',
@@ -412,7 +412,7 @@ export const resumeDataEn: ResumeData = {
       role: 'Frontend Tech Lead',
       period: 'Jun 2021 - Dec 2022',
       description: 'Built Banking-as-a-Service Whitelabel platform from 0 to 1, collaborated with US team to lead web frontend architecture design, implementing core banking modules to support rapid business onboarding and legacy system migration.',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
+      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
       highlights: [
         'Adopted micro-frontend architecture design for independent module deployment and upgrades',
         'Implemented 100% configurable architecture supporting different brands/partners using same codebase for differentiated business needs with dynamic theme, image, and copy loading',
@@ -459,7 +459,7 @@ export const resumeDataEn: ResumeData = {
     },
     {
       category: 'Testing',
-      items: ['Jest', 'Karma', 'Protractor'],
+      items: ['Jest', 'Jasmine', 'Karma', 'Protractor'],
     },
     {
       category: 'Backend Skills',
