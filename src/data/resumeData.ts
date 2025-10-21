@@ -117,10 +117,10 @@ export const resumeDataZh: ResumeData = {
   },
 
   // 求职意向
-  jobIntention: '高级前端工程师 / 前端架构师',
+  jobIntention: '高级Web前端工程师',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `拥有11年软件开发经验，精通React、Angular等主流前端框架，擅长架构设计与性能优化。后端熟悉C#、Node.js、Python等技术栈。现任软件工程师主管，曾主导多个千万级用户金融产品的前端架构设计与开发，成功为公司节省70%的安全成本。注重代码质量与工程化建设，推动开发效率与交付稳定性持续提升。具备优秀的跨国团队协作能力和英语沟通能力，热衷于技术交流与团队成长。`,
+  personalSummary: `具备丰富的前端开发经验，精通React、Angular等主流框架，擅长架构设计与性能优化。熟悉C#、Node.js、Python等后端技术栈，能够从全栈视角优化系统设计与交付质量。注重代码质量与工程化建设，持续推动开发效率与交付稳定性提升。具备优秀的跨国团队协作与英语沟通能力，乐于分享与技术成长。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -130,7 +130,7 @@ export const resumeDataZh: ResumeData = {
       major: '工程管理',
       school: '华东理工大学',
       location: '上海',
-      period: '2023.09 - 2026.01',
+      period: '2023.09 - 至今',
       isInProgress: true,
       expectedGraduation: '2026.01',
       researchDirection: '大数据商务分析',
@@ -255,7 +255,7 @@ export const resumeDataZh: ResumeData = {
     },
     {
       category: 'AI辅助编程',
-      items: ['Claude Code', 'GitHub Copilot', 'Cursor'],
+      items: ['Claude Code', 'GitHub Copilot', 'Codex'],
     },
     {
       category: '软技能',
@@ -313,10 +313,10 @@ export const resumeDataEn: ResumeData = {
   },
 
   // Job Intention
-  jobIntention: 'Senior Frontend Engineer / Frontend Architect',
+  jobIntention: 'Senior Web Frontend Engineer',
 
   // Personal Summary (150-200 words)
-  personalSummary: `Software engineer with 11 years of experience, proficient in React and Angular frontend frameworks, specialized in architecture design and performance optimization. Familiar with C#, Node.js, and Python on the backend. Currently serving as Software Engineering Manager, led frontend architecture design and development for multiple financial products serving tens of millions of users, successfully reducing company security costs by 70%. Committed to code quality and engineering infrastructure, continuously improving development efficiency and delivery stability. Possess excellent cross-cultural team collaboration and English communication skills, passionate about technical exchange and team growth.`,
+  personalSummary: `Experienced front-end developer with strong expertise in React and Angular frameworks, skilled in architecture design and performance optimization. Familiar with back-end technologies such as C#, Node.js, and Python, with the ability to optimize system design and delivery quality from a full-stack perspective. Committed to code quality and engineering excellence, consistently driving improvements in development efficiency and delivery stability. Strong cross-national collaboration and English communication skills, with a passion for knowledge sharing and team growth.`,
 
   // Education (Master first, Bachelor second)
   education: [
@@ -326,7 +326,7 @@ export const resumeDataEn: ResumeData = {
       major: 'Engineering Management',
       school: 'East China University of Science and Technology',
       location: 'Shanghai',
-      period: 'Sep 2023 - Jan 2026',
+      period: 'Sep 2023 - Now',
       isInProgress: true,
       expectedGraduation: 'Jan 2026',
       researchDirection: 'Big Data Business Analytics',
@@ -447,7 +447,7 @@ export const resumeDataEn: ResumeData = {
     },
     {
       category: 'AI-Assisted Programming',
-      items: ['Claude Code', 'GitHub Copilot', 'Cursor'],
+      items: ['Claude Code', 'GitHub Copilot', 'Codex'],
     },
     {
       category: 'Soft Skills',
