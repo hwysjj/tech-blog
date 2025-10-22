@@ -117,7 +117,7 @@ export const resumeDataZh: ResumeData = {
   },
 
   // 求职意向
-  jobIntention: '高级Web前端工程师',
+  jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
   personalSummary: `具备丰富的前端开发经验，精通React、Angular等主流框架，擅长架构设计与性能优化。熟悉C#、Node.js、Python等后端技术栈，能够从全栈视角优化系统设计与交付质量。注重代码质量与工程化建设，持续推动开发效率与交付稳定性提升。具备优秀的跨国团队协作与英语沟通能力，乐于分享与技术成长。`,
@@ -194,7 +194,7 @@ export const resumeDataZh: ResumeData = {
       role: 'Web前端技术负责人',
       period: '2024.02 - 现在',
       description: '主导Walmart和Greedot两大金融系统向BaaS平台的Web前端迁移，负责技术选型、架构设计与实施落地。',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
+      technologies: ['React', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
         '主导Web前端从本地服务器迁移至Azure云端，实现同域名支持新老系统并存，解决IPv6兼容性、URL冲突等技术难题',
         '实现多租户架构，通过路由与配置隔离机制，使不同产品用户自动访问对应云端环境',
@@ -206,7 +206,7 @@ export const resumeDataZh: ResumeData = {
       role: 'Web前端技术负责人',
       period: '2021.06 - 2022.12',
       description: '从0到1构建Banking-as-a-Service Whitelabel平台，与美国团队共同主导Web前端架构设计，实现银行核心功能模块，支持多业务快速上线与遗留系统迁移。',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
+      technologies: ['React', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
       highlights: [
         '采用微前端架构设计，实现各模块独立部署和升级',
         '实现100%可配置化架构，支持不同品牌/合作伙伴使用同一代码基线满足差异化业务需求，动态加载主题、图片与文案',
@@ -218,7 +218,7 @@ export const resumeDataZh: ResumeData = {
       role: 'Tech Lead',
       period: '2022.04 - 2023.04',
       description: '主导公司信息安全部门提出的Google reCAPTCHA安全接入项目，作为Tech Lead兼Web端开发负责人，在全公司各Web与App安全敏感流程中集成Google reCAPTCHA。',
-      technologies: ['React 18', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
+      technologies: ['React', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
         '提出并实施one-time token机制，进一步提高系统安全性',
         '基于IP Audit + IOvation的智能触发机制减少不必要的API调用，为公司降低70%的reCAPTCHA月度成本',
@@ -323,7 +323,7 @@ export const resumeDataEn: ResumeData = {
   },
 
   // Job Intention
-  jobIntention: 'Senior Web Frontend Engineer',
+  jobIntention: 'Web Frontend Engineer | Full Stack Engineer | .NET',
 
   // Personal Summary (150-200 words)
   personalSummary: `Experienced front-end developer with strong expertise in React and Angular frameworks, skilled in architecture design and performance optimization. Familiar with back-end technologies such as C#, Node.js, and Python, with the ability to optimize system design and delivery quality from a full-stack perspective. Committed to code quality and engineering excellence, consistently driving improvements in development efficiency and delivery stability. Strong cross-national collaboration and English communication skills, with a passion for knowledge sharing and team growth.`,
@@ -400,7 +400,7 @@ export const resumeDataEn: ResumeData = {
       role: 'Frontend Tech Lead',
       period: 'Feb 2024 - Present',
       description: 'Led web frontend migration for Walmart and Greedot financial systems to BaaS platform, responsible for technology selection, architecture design, and implementation.',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
+      technologies: ['React', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
         'Led web frontend migration from on-premises servers to Azure cloud, enabling coexistence of new and legacy systems under the same domain, solving IPv6 compatibility and URL conflict challenges',
         'Implemented multi-tenant architecture with routing and configuration isolation, enabling automatic access to corresponding cloud environments for different product users',
@@ -412,7 +412,7 @@ export const resumeDataEn: ResumeData = {
       role: 'Frontend Tech Lead',
       period: 'Jun 2021 - Dec 2022',
       description: 'Built Banking-as-a-Service Whitelabel platform from 0 to 1, collaborated with US team to lead web frontend architecture design, implementing core banking modules to support rapid business onboarding and legacy system migration.',
-      technologies: ['React 18', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
+      technologies: ['React', 'Angular', 'TypeScript', 'Module Federation', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git'],
       highlights: [
         'Adopted micro-frontend architecture design for independent module deployment and upgrades',
         'Implemented 100% configurable architecture supporting different brands/partners using same codebase for differentiated business needs with dynamic theme, image, and copy loading',
@@ -424,7 +424,7 @@ export const resumeDataEn: ResumeData = {
       role: 'Tech Lead',
       period: 'Apr 2022 - Apr 2023',
       description: 'Led Google reCAPTCHA security integration project initiated by company security department, serving as Tech Lead and web development lead, integrating Google reCAPTCHA across all company web and app security-sensitive workflows.',
-      technologies: ['React 18', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
+      technologies: ['React', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
         'Proposed and implemented one-time token mechanism to further enhance system security',
         'Reduced unnecessary API calls by 70% through intelligent trigger mechanism based on IP Audit + IOvation, cutting reCAPTCHA monthly costs by 70%',
