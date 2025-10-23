@@ -120,7 +120,7 @@ export const resumeDataZh: ResumeData = {
   jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `具备丰富的前端开发经验，精通React、Angular等主流框架，擅长架构设计与性能优化。熟悉C#、Node.js、Python等后端技术栈，能够从全栈视角优化系统设计与交付质量。注重代码质量与工程化建设，持续推动开发效率与交付稳定性提升。具备优秀的跨国团队协作与英语沟通能力，乐于分享与技术成长。`,
+  personalSummary: `具备10年以上前端开发经验，精通React、Angular等主流框架，擅长架构设计与性能优化。熟悉C#、Node.js、Python等后端技术栈，能够从全栈视角优化系统设计与交付质量。注重代码质量与工程化建设，持续推动开发效率与交付稳定性提升。具备优秀的跨国团队协作与英语沟通能力，乐于分享与技术成长。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -326,7 +326,7 @@ export const resumeDataEn: ResumeData = {
   jobIntention: 'Web Frontend Engineer | Full Stack Engineer | .NET',
 
   // Personal Summary (150-200 words)
-  personalSummary: `Experienced front-end developer with strong expertise in React and Angular frameworks, skilled in architecture design and performance optimization. Familiar with back-end technologies such as C#, Node.js, and Python, with the ability to optimize system design and delivery quality from a full-stack perspective. Committed to code quality and engineering excellence, consistently driving improvements in development efficiency and delivery stability. Strong cross-national collaboration and English communication skills, with a passion for knowledge sharing and team growth.`,
+  personalSummary: `Front-end developer with over 10 years of experience, with strong expertise in React and Angular frameworks, skilled in architecture design and performance optimization. Familiar with back-end technologies such as C#, Node.js, and Python, with the ability to optimize system design and delivery quality from a full-stack perspective. Committed to code quality and engineering excellence, consistently driving improvements in development efficiency and delivery stability. Strong cross-national collaboration and English communication skills, with a passion for knowledge sharing and team growth.`,
 
   // Education (Master first, Bachelor second)
   education: [

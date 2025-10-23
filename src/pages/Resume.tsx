@@ -18,6 +18,7 @@ import {
 } from '@mui/material';
 import {
   Download,
+  Description,
   Email,
   Phone,
   LocationOn,
@@ -39,6 +40,7 @@ import type { ResumeData } from '../data/resumeData';
 import { resumeDataZh, resumeDataEn } from '../data/resumeData';
 import ResumePDF from '../components/ResumePDF';
 import { resumeTheme } from '../theme/resumeTheme';
+import { generateResumeDocx } from '../utils/generateResumeDocx';
 
 const Resume = () => {
   const [language, setLanguage] = useState<'zh' | 'en'>('zh');
@@ -50,6 +52,8 @@ const Resume = () => {
   const labels = {
     zh: {
       download: '下载简历',
+      downloadPDF: '下载 PDF',
+      downloadWord: '下载 Word',
       basicInfo: '基本信息',
       contact: '联系方式',
       skills: '专业技能',
@@ -79,6 +83,8 @@ const Resume = () => {
     },
     en: {
       download: 'Download Resume',
+      downloadPDF: 'Download PDF',
+      downloadWord: 'Download Word',
       basicInfo: 'Basic Information',
       contact: 'Contact',
       skills: 'Skills',
@@ -132,6 +138,25 @@ const Resume = () => {
       URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error generating PDF:', error);
+    }
+  };
+
+  const handleDownloadWord = async () => {
+    try {
+      const blob = await generateResumeDocx(data, language);
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      const fileName = language === 'zh'
+        ? `${data.contact.name}_简历_${new Date().toISOString().split('T')[0]}.docx`
+        : `${data.contact.name}_Resume_${new Date().toISOString().split('T')[0]}.docx`;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error generating Word document:', error);
     }
   };
 
@@ -701,20 +726,39 @@ const Resume = () => {
               <ToggleButton value="en">English</ToggleButton>
             </ToggleButtonGroup>
 
-            <Button
-              variant="contained"
-              startIcon={<Download />}
-              onClick={handleDownload}
-              size="large"
-              sx={{
-                backgroundColor: resumeTheme.colors.primary,
-                '&:hover': {
-                  backgroundColor: resumeTheme.colors.primaryDark,
-                },
-              }}
-            >
-              {t.download}
-            </Button>
+            <Box sx={{ display: 'flex', gap: 2 }}>
+              <Button
+                variant="outlined"
+                startIcon={<Download />}
+                onClick={handleDownload}
+                size="large"
+                sx={{
+                  borderColor: resumeTheme.colors.primary,
+                  color: resumeTheme.colors.primary,
+                  '&:hover': {
+                    borderColor: resumeTheme.colors.primaryDark,
+                    backgroundColor: 'rgba(44, 62, 80, 0.04)',
+                  },
+                }}
+              >
+                {t.downloadPDF}
+              </Button>
+
+              <Button
+                variant="contained"
+                startIcon={<Description />}
+                onClick={handleDownloadWord}
+                size="large"
+                sx={{
+                  backgroundColor: resumeTheme.colors.primary,
+                  '&:hover': {
+                    backgroundColor: resumeTheme.colors.primaryDark,
+                  },
+                }}
+              >
+                {t.downloadWord}
+              </Button>
+            </Box>
           </Box>
         </Container>
       </Box>
