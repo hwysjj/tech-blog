@@ -74,10 +74,12 @@ export interface ContactInfo {
   name: string; // 姓名
   email: string; // 邮箱
   phone: string; // 电话
+  wechat?: string; // 微信号
   address: string; // 地址
   github?: string; // GitHub链接
   linkedin?: string; // LinkedIn链接
-  website?: string; // 个人网站
+  website?: string; // 个人网站/博客
+  resumeUrl?: string; // 在线简历链接
 }
 
 // 完整简历数据结构
@@ -110,10 +112,12 @@ export const resumeDataZh: ResumeData = {
     name: '华文益',
     email: 'william_cumt@hotmail.com',
     phone: '+86 185-0215-5866',
+    wechat: '18502155866',
     address: '上海市浦东新区',
     github: '',
     linkedin: '',
-    website: '',
+    website: 'https://huawenyi.vercel.app/',
+    resumeUrl: 'https://huawenyi.vercel.app/resume',
   },
 
   // 求职意向
@@ -141,7 +145,7 @@ export const resumeDataZh: ResumeData = {
       degree: '本科',
       degreeLevel: '本科',
       major: '计算机科学与技术',
-      school: '中国矿业大学',
+      school: '中国矿业大学徐海学院',
       location: '徐州',
       period: '2009.09 - 2013.07',
       gpa: '',
@@ -316,10 +320,12 @@ export const resumeDataEn: ResumeData = {
     name: 'Wenyi Hua',
     email: 'william_cumt@hotmail.com',
     phone: '+86 185-0215-5866',
+    wechat: '18502155866',
     address: 'Pudong District, Shanghai',
     github: '',
     linkedin: '',
-    website: '',
+    website: 'https://huawenyi.vercel.app/',
+    resumeUrl: 'https://huawenyi.vercel.app/resume',
   },
 
   // Job Intention
@@ -347,7 +353,7 @@ export const resumeDataEn: ResumeData = {
       degree: 'Bachelor of Computer Science',
       degreeLevel: 'Bachelor',
       major: 'Computer Science and Technology',
-      school: 'China University of Mining and Technology',
+      school: 'China University of Mining and Technology, Xuhai College',
       location: 'Xuzhou',
       period: 'Sep 2009 - Jul 2013',
       gpa: '',

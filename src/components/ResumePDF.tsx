@@ -332,6 +332,9 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
               {data.contact.email}
             </Link>
             <Text style={styles.sidebarText}>{data.contact.phone}</Text>
+            {data.contact.wechat && (
+              <Text style={styles.sidebarText}>微信: {data.contact.wechat}</Text>
+            )}
             <Text style={styles.sidebarText}>{data.contact.address}</Text>
             {data.contact.github && (
               <Link src={data.contact.github} style={styles.sidebarLink}>
@@ -345,7 +348,12 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             )}
             {data.contact.website && (
               <Link src={data.contact.website} style={styles.sidebarLink}>
-                Website
+                博客
+              </Link>
+            )}
+            {data.contact.resumeUrl && (
+              <Link src={data.contact.resumeUrl} style={styles.sidebarLink}>
+                在线简历
               </Link>
             )}
           </View>

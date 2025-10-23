@@ -34,6 +34,8 @@ import {
   EmojiEvents,
   Language as LanguageIcon,
   CardMembership,
+  Chat,
+  Article,
 } from '@mui/icons-material';
 import { pdf } from '@react-pdf/renderer';
 import type { ResumeData } from '../data/resumeData';
@@ -246,6 +248,12 @@ const Resume = () => {
               <Typography variant="body2">{data.contact.phone}</Typography>
             </Link>
           </Box>
+          {data.contact.wechat && (
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Chat fontSize="small" sx={{ opacity: 0.7 }} />
+              <Typography variant="body2">微信: {data.contact.wechat}</Typography>
+            </Box>
+          )}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <LocationOn fontSize="small" sx={{ opacity: 0.7 }} />
             <Typography variant="body2">{data.contact.address}</Typography>
@@ -285,7 +293,20 @@ const Resume = () => {
                 rel="noopener"
                 sx={{ color: resumeTheme.colors.sidebarText, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
               >
-                <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>Website</Typography>
+                <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>博客</Typography>
+              </Link>
+            </Box>
+          )}
+          {data.contact.resumeUrl && (
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Article fontSize="small" sx={{ opacity: 0.7 }} />
+              <Link
+                href={data.contact.resumeUrl}
+                target="_blank"
+                rel="noopener"
+                sx={{ color: resumeTheme.colors.sidebarText, textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
+              >
+                <Typography variant="body2" sx={{ wordBreak: 'break-all' }}>在线简历</Typography>
               </Link>
             </Box>
           )}

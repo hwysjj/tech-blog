@@ -256,6 +256,26 @@ export async function generateResumeDocx(
     }),
   ];
 
+  if (data.contact.wechat) {
+    basicInfoRows.push(
+      new TableRow({
+        children: [
+          new TableCell({
+            children: [
+              new Paragraph({
+                children: [
+                  new TextRun({ text: '微信/WeChat: ', bold: true }),
+                  new TextRun({ text: data.contact.wechat }),
+                ],
+              }),
+            ],
+            columnSpan: 2,
+          }),
+        ],
+      })
+    );
+  }
+
   if (data.contact.github) {
     basicInfoRows.push(
       new TableRow({
@@ -286,6 +306,46 @@ export async function generateResumeDocx(
                 children: [
                   new TextRun({ text: 'LinkedIn: ', bold: true }),
                   new TextRun({ text: data.contact.linkedin }),
+                ],
+              }),
+            ],
+            columnSpan: 2,
+          }),
+        ],
+      })
+    );
+  }
+
+  if (data.contact.website) {
+    basicInfoRows.push(
+      new TableRow({
+        children: [
+          new TableCell({
+            children: [
+              new Paragraph({
+                children: [
+                  new TextRun({ text: '博客/Blog: ', bold: true }),
+                  new TextRun({ text: data.contact.website }),
+                ],
+              }),
+            ],
+            columnSpan: 2,
+          }),
+        ],
+      })
+    );
+  }
+
+  if (data.contact.resumeUrl) {
+    basicInfoRows.push(
+      new TableRow({
+        children: [
+          new TableCell({
+            children: [
+              new Paragraph({
+                children: [
+                  new TextRun({ text: '在线简历/Resume: ', bold: true }),
+                  new TextRun({ text: data.contact.resumeUrl }),
                 ],
               }),
             ],
