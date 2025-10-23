@@ -399,7 +399,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
         {/* 右侧主体内容 */}
         <View style={styles.main}>
           {/* 求职意向 */}
-          <View style={{ marginBottom: 15 }}>
+          <View>
             <Text style={styles.jobIntention}>{t.jobIntention}</Text>
             <Text style={styles.jobTitle}>{data.jobIntention}</Text>
           </View>
@@ -407,7 +407,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           <View style={styles.divider} />
 
           {/* 个人简介 */}
-          <View style={{ marginBottom: 15 }}>
+          <View>
             <Text style={styles.sectionTitle}>{t.personalSummary}</Text>
             <View style={styles.summaryCard}>
               <Text style={styles.summaryText}>{data.personalSummary}</Text>
@@ -417,7 +417,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           <View style={styles.divider} />
 
           {/* 工作经历 */}
-          <View style={{ marginBottom: 15 }}>
+          <View>
             <Text style={styles.sectionTitle}>{t.workExperience}</Text>
             {data.workExperience.map((work, index) => (
               <View key={index} style={styles.card}>
@@ -464,7 +464,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           <View style={styles.divider} />
 
           {/* 项目经验 */}
-          <View style={{ marginBottom: 15 }}>
+          <View>
             <Text style={styles.sectionTitle}>{t.projects}</Text>
             {data.projects.map((project, index) => (
               <View key={index} style={styles.card}>
@@ -509,7 +509,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           <View style={styles.divider} />
 
           {/* 教育背景 */}
-          <View style={{ marginBottom: 15 }}>
+          <View>
             <Text style={styles.sectionTitle}>{t.education}</Text>
             {data.education.map((edu, index) => (
               <View key={index} style={styles.card}>
@@ -557,7 +557,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           {data.awards.length > 0 && (
             <>
               <View style={styles.divider} />
-              <View style={{ marginBottom: 15 }}>
+              <View>
                 <Text style={styles.sectionTitle}>{t.awards}</Text>
                 {data.awards.map((award, index) => (
                   <View key={index} style={styles.card}>
