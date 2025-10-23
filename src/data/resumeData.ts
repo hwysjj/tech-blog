@@ -116,8 +116,6 @@ export const resumeDataZh: ResumeData = {
     address: '上海市浦东新区',
     github: '',
     linkedin: '',
-    website: 'https://huawenyi.vercel.app/',
-    resumeUrl: 'https://huawenyi.vercel.app/resume',
   },
 
   // 求职意向
@@ -165,7 +163,7 @@ export const resumeDataZh: ResumeData = {
         '负责公司 Web 前端整体架构设计与技术选型，主导基于 React / Angular + TypeScript 的开发与重构',
         '基于 Webpack + Module Federation 搭建微前端架构，提升系统的模块化与可复用性',
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
-        '参与后端 .NET WebAPI 开发与集成，完善前后端数据交互流程',
+        '通过 RESTful API 集成后端服务，同时参与 .NET WebAPI 接口编写与联调，完善前后端数据交互流程',
         '与 DevOps 团队协作推进 CI/CD 流程建设（Jenkins / TeamCity）以及本地服务器到 Azure 云端的迁移工作，支持自动化构建、测试与发布',
         '建立前端单元测试体系，使用 Jest / Jasmine / Karma 等工具，确保关键模块 UT 覆盖率达 80% 以上',
         '作为项目 Web 前端主要沟通与推动负责人，负责跨团队需求澄清、进度跟踪与问题闭环，确保前后端协作顺畅高效',
@@ -316,8 +314,6 @@ export const resumeDataEn: ResumeData = {
     address: 'Pudong District, Shanghai',
     github: '',
     linkedin: '',
-    website: 'https://huawenyi.vercel.app/',
-    resumeUrl: 'https://huawenyi.vercel.app/resume',
   },
 
   // Job Intention

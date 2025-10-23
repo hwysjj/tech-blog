@@ -346,16 +346,6 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                 LinkedIn
               </Link>
             )}
-            {data.contact.website && (
-              <Link src={data.contact.website} style={styles.sidebarLink}>
-                博客
-              </Link>
-            )}
-            {data.contact.resumeUrl && (
-              <Link src={data.contact.resumeUrl} style={styles.sidebarLink}>
-                在线简历
-              </Link>
-            )}
           </View>
 
           <View style={styles.sidebarDivider} />
