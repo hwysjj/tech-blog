@@ -124,7 +124,7 @@ export const resumeDataZh: ResumeData = {
   jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `具备10年以上前端开发经验，精通React、Angular等主流框架，擅长架构设计与性能优化。熟悉C#、Node.js、Python等后端技术栈，能够从全栈视角优化系统设计与交付质量。注重代码质量与工程化建设，持续推动开发效率与交付稳定性提升。具备优秀的跨国团队协作与英语沟通能力，乐于分享与技术成长。`,
+  personalSummary: `具备十年以上的前端与全栈开发经验，精通 React、Angular 等主流框架，熟悉 C#、Node.js、Python 技术栈。擅长 Web 架构设计与性能优化，具备系统级工程化建设经验。注重代码质量与交付流程持续改进，熟练运用 Jenkins、TeamCity、Azure 等 DevOps 工具实现持续集成与部署。长期在跨国团队环境下工作，能够高效协作、推动复杂项目落地。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -248,32 +248,24 @@ export const resumeDataZh: ResumeData = {
   // 技能
   skills: [
     {
-      category: '前端技术',
-      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Material-UI (MUI)', 'Sass/Less/Stylus'],
-    },
-    // {
-    //   category: '状态管理',
-    //   items: ['Redux', 'MobX', 'Zustand', 'RxJS', 'React Query'],
-    // },
-    {
-      category: '工程化工具',
-      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm', 'Git', 'Perforce', 'Jenkins'],
+      category: '前端开发',
+      items: ['React', 'Angular', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'MUI'],
     },
     {
-      category: '测试',
-      items: ['Jest', 'Jasmine', 'Karma', 'Protractor'],
+      category: '工程化与测试',
+      items: ['Webpack', 'Vite', 'Jenkins', 'TeamCity', 'Jest', 'Jasmine', 'Karma'],
     },
     {
-      category: '后端技能',
-      items: ['Node.js', '.Net', 'C#', 'Express', 'Python', 'Java'],
+      category: '后端与全栈',
+      items: ['Node.js', '.NET', 'C#', 'RESTful API', 'Azure', 'Express'],
     },
     {
-      category: 'AI辅助编程',
-      items: ['Claude Code', 'GitHub Copilot', 'Codex'],
+      category: '开发模式',
+      items: ['微前端架构', 'CI/CD', '模块化设计', '敏捷开发'],
     },
     {
-      category: '软技能',
-      items: ['团队协作', '技术文档撰写', '代码审查', '敏捷开发', '问题解决'],
+      category: 'AI工具',
+      items: ['GitHub Copilot', 'Claude Code', 'Codex'],
     },
   ],
 
@@ -281,7 +273,7 @@ export const resumeDataZh: ResumeData = {
   languages: [
     {
       name: '英语',
-      level: 'CET-6 | 良好的听说读写能力',
+      level: 'CET-6，熟练的跨国团队沟通与协作能力',
     },
   ],
 
@@ -332,7 +324,7 @@ export const resumeDataEn: ResumeData = {
   jobIntention: 'Web Frontend Engineer | Full Stack Engineer | .NET',
 
   // Personal Summary (150-200 words)
-  personalSummary: `Front-end developer with over 10 years of experience, with strong expertise in React and Angular frameworks, skilled in architecture design and performance optimization. Familiar with back-end technologies such as C#, Node.js, and Python, with the ability to optimize system design and delivery quality from a full-stack perspective. Committed to code quality and engineering excellence, consistently driving improvements in development efficiency and delivery stability. Strong cross-national collaboration and English communication skills, with a passion for knowledge sharing and team growth.`,
+  personalSummary: `Over 10 years of front-end and full-stack development experience, proficient in React, Angular and other mainstream frameworks, familiar with C#, Node.js, Python technology stacks. Expertise in Web architecture design and performance optimization with system-level engineering construction experience. Focus on continuous improvement of code quality and delivery process, skilled in using Jenkins, TeamCity, Azure and other DevOps tools to achieve continuous integration and deployment. Long-term work experience in cross-national team environments with ability to collaborate efficiently and drive complex projects to completion.`,
 
   // Education (Master first, Bachelor second)
   education: [
@@ -456,28 +448,24 @@ export const resumeDataEn: ResumeData = {
   // Skills
   skills: [
     {
-      category: 'Frontend Technologies',
-      items: ['React', 'Angular', 'AngularJS', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Material-UI (MUI)', 'Sass/Less/Stylus'],
+      category: 'Frontend Development',
+      items: ['React', 'Angular', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'MUI'],
     },
     {
-      category: 'Engineering Tools',
-      items: ['Webpack', 'Vite', 'Gulp', 'Grunt', 'npm', 'Git', 'Perforce', 'Jenkins'],
+      category: 'Engineering & Testing',
+      items: ['Webpack', 'Vite', 'Jenkins', 'TeamCity', 'Jest', 'Jasmine', 'Karma'],
     },
     {
-      category: 'Testing',
-      items: ['Jest', 'Jasmine', 'Karma', 'Protractor'],
+      category: 'Backend & Full Stack',
+      items: ['Node.js', '.NET', 'C#', 'RESTful API', 'Azure', 'Express'],
     },
     {
-      category: 'Backend Skills',
-      items: ['Node.js', '.NET', 'C#', 'Express', 'Python', 'Java'],
+      category: 'Development Patterns',
+      items: ['Micro-frontend Architecture', 'CI/CD', 'Modular Design', 'Agile Development'],
     },
     {
-      category: 'AI-Assisted Programming',
-      items: ['Claude Code', 'GitHub Copilot', 'Codex'],
-    },
-    {
-      category: 'Soft Skills',
-      items: ['Team Collaboration', 'Technical Writing', 'Code Review', 'Agile Development', 'Problem Solving'],
+      category: 'AI Tools',
+      items: ['GitHub Copilot', 'Claude Code', 'Codex'],
     },
   ],
 
@@ -485,7 +473,7 @@ export const resumeDataEn: ResumeData = {
   languages: [
     {
       name: 'English',
-      level: 'CET-6 | Proficient in listening, speaking, reading and writing',
+      level: 'CET-6, Proficient cross-national team communication and collaboration',
     },
   ],
 
