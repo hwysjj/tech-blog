@@ -162,7 +162,7 @@ export const resumeDataZh: ResumeData = {
       period: '2015.08 - 至今',
       responsibilities: [
         '晋升轨迹：软件开发工程师（2015.08-2018.02）→ 高级工程师（2018.03-2021.03）→ 主管（2021.04至今）',
-        '负责公司 Web 前端架构设计与技术方案，带领团队基于 Angular / React + TypeScript 技术栈进行开发与迭代',
+        '负责公司 Web 前端整体架构设计与技术选型，主导基于 React / Angular + TypeScript 的开发与重构',
         '基于 Webpack + Module Federation 搭建微前端架构，提升系统的模块化与可复用性',
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
         '通过 RESTful API 集成后端服务，参与部分 .NET WebAPI 接口编写与联调，完善前后端数据交互流程',
@@ -362,7 +362,7 @@ export const resumeDataEn: ResumeData = {
       period: 'Aug 2015 - Present',
       responsibilities: [
         'Career Progression: Software Engineer (Mar Aug - Feb 2018) → Senior Engineer (Mar 2018 - Mar 2021) → Manager (Apr 2021 - Present)',
-        'Led company Web frontend architecture design and technical solutions, guiding team development and iteration based on Angular / React + TypeScript stack',
+        'Responsible for overall Web frontend architecture design and technology selection, leading development and refactoring based on React / Angular + TypeScript',
         'Built micro-frontend architecture using Webpack + Module Federation, enhancing system modularity and reusability',
         'Drove responsive web development to unify user experience across PC, mobile, and Android / iOS WebView platforms',
         'Integrated backend services via RESTful API, participated in .NET WebAPI development and debugging, optimizing frontend-backend data interaction',
