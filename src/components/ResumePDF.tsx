@@ -416,53 +416,6 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
 
           <View style={styles.divider} />
 
-          {/* 教育背景 */}
-          <View style={{ marginBottom: 15 }}>
-            <Text style={styles.sectionTitle}>{t.education}</Text>
-            {data.education.map((edu, index) => (
-              <View key={index} style={styles.card}>
-                <View style={styles.subsectionHeader}>
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.subsectionTitle}>
-                      {edu.degree}
-                      {edu.isInProgress && ` (${t.inProgress})`}
-                    </Text>
-                    <Text style={styles.subsectionSubtitle}>
-                      {edu.school} · {edu.major}
-                    </Text>
-                    {edu.researchDirection && (
-                      <Text style={styles.subsectionSubtitle}>
-                        {t.researchDirection}: {edu.researchDirection}
-                      </Text>
-                    )}
-                  </View>
-                  <View>
-                    <Text style={styles.subsectionDate}>{edu.location}</Text>
-                    <Text style={styles.subsectionDate}>
-                      {edu.period}
-                      {edu.isInProgress && edu.expectedGraduation && ` (${t.expected} ${edu.expectedGraduation})`}
-                    </Text>
-                  </View>
-                </View>
-                {edu.gpa && (
-                  <Text style={styles.bodyText}>{t.gpa}: {edu.gpa}</Text>
-                )}
-                {edu.honors && edu.honors.length > 0 && (
-                  <View>
-                    <Text style={styles.labelBold}>{t.honors}:</Text>
-                    <View style={styles.chipContainer}>
-                      {edu.honors.map((honor, i) => (
-                        <Text key={i} style={styles.chip}>{honor}</Text>
-                      ))}
-                    </View>
-                  </View>
-                )}
-              </View>
-            ))}
-          </View>
-
-          <View style={styles.divider} />
-
           {/* 工作经历 */}
           <View style={{ marginBottom: 15 }}>
             <Text style={styles.sectionTitle}>{t.workExperience}</Text>
@@ -553,11 +506,58 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             ))}
           </View>
 
+          <View style={styles.divider} />
+
+          {/* 教育背景 */}
+          <View style={{ marginBottom: 15 }}>
+            <Text style={styles.sectionTitle}>{t.education}</Text>
+            {data.education.map((edu, index) => (
+              <View key={index} style={styles.card}>
+                <View style={styles.subsectionHeader}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.subsectionTitle}>
+                      {edu.degree}
+                      {edu.isInProgress && ` (${t.inProgress})`}
+                    </Text>
+                    <Text style={styles.subsectionSubtitle}>
+                      {edu.school} · {edu.major}
+                    </Text>
+                    {edu.researchDirection && (
+                      <Text style={styles.subsectionSubtitle}>
+                        {t.researchDirection}: {edu.researchDirection}
+                      </Text>
+                    )}
+                  </View>
+                  <View>
+                    <Text style={styles.subsectionDate}>{edu.location}</Text>
+                    <Text style={styles.subsectionDate}>
+                      {edu.period}
+                      {edu.isInProgress && edu.expectedGraduation && ` (${t.expected} ${edu.expectedGraduation})`}
+                    </Text>
+                  </View>
+                </View>
+                {edu.gpa && (
+                  <Text style={styles.bodyText}>{t.gpa}: {edu.gpa}</Text>
+                )}
+                {edu.honors && edu.honors.length > 0 && (
+                  <View>
+                    <Text style={styles.labelBold}>{t.honors}:</Text>
+                    <View style={styles.chipContainer}>
+                      {edu.honors.map((honor, i) => (
+                        <Text key={i} style={styles.chip}>{honor}</Text>
+                      ))}
+                    </View>
+                  </View>
+                )}
+              </View>
+            ))}
+          </View>
+
           {/* 获奖经历 */}
           {data.awards.length > 0 && (
             <>
               <View style={styles.divider} />
-              <View>
+              <View style={{ marginBottom: 15 }}>
                 <Text style={styles.sectionTitle}>{t.awards}</Text>
                 {data.awards.map((award, index) => (
                   <View key={index} style={styles.card}>

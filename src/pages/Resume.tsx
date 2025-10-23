@@ -401,83 +401,6 @@ const Resume = () => {
 
       <Divider sx={{ my: 3 }} />
 
-      {/* 教育背景 */}
-      <Box sx={{ mb: 4 }}>
-        <Typography
-          variant="h5"
-          sx={{
-            fontWeight: 'bold',
-            color: resumeTheme.colors.primary,
-            mb: 2,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 1,
-          }}
-        >
-          <School />
-          {t.education}
-        </Typography>
-        <Stack spacing={3}>
-          {data.education.map((edu, index) => (
-            <Card key={index} elevation={1}>
-              <CardContent>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', mb: 1 }}>
-                  <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                      {edu.degree}
-                      {edu.isInProgress && (
-                        <Chip
-                          label={t.inProgress}
-                          size="small"
-                          color="primary"
-                          sx={{ ml: 1, fontSize: '0.7rem' }}
-                        />
-                      )}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                      {edu.school} · {edu.major}
-                    </Typography>
-                    {edu.researchDirection && (
-                      <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
-                        {t.researchDirection}: {edu.researchDirection}
-                      </Typography>
-                    )}
-                  </Box>
-                  <Box sx={{ textAlign: isMobile ? 'left' : 'right', mt: isMobile ? 1 : 0 }}>
-                    <Typography variant="body2" color="text.secondary">
-                      {edu.location}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {edu.period}
-                      {edu.isInProgress && edu.expectedGraduation && ` (${t.expected} ${edu.expectedGraduation})`}
-                    </Typography>
-                  </Box>
-                </Box>
-                {edu.gpa && (
-                  <Typography variant="body2" sx={{ mt: 1 }}>
-                    {t.gpa}: <strong>{edu.gpa}</strong>
-                  </Typography>
-                )}
-                {edu.honors && edu.honors.length > 0 && (
-                  <Box sx={{ mt: 1 }}>
-                    <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 0.5 }}>
-                      {t.honors}:
-                    </Typography>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                      {edu.honors.map((honor, i) => (
-                        <Chip key={i} label={honor} size="small" color="primary" />
-                      ))}
-                    </Box>
-                  </Box>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </Stack>
-      </Box>
-
-      <Divider sx={{ my: 3 }} />
-
       {/* 工作经历 */}
       <Box sx={{ mb: 4 }}>
         <Typography
@@ -621,11 +544,88 @@ const Resume = () => {
         </Stack>
       </Box>
 
+      <Divider sx={{ my: 3 }} />
+
+      {/* 教育背景 */}
+      <Box sx={{ mb: 4 }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 'bold',
+            color: resumeTheme.colors.primary,
+            mb: 2,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
+          }}
+        >
+          <School />
+          {t.education}
+        </Typography>
+        <Stack spacing={3}>
+          {data.education.map((edu, index) => (
+            <Card key={index} elevation={1}>
+              <CardContent>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', mb: 1 }}>
+                  <Box>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                      {edu.degree}
+                      {edu.isInProgress && (
+                        <Chip
+                          label={t.inProgress}
+                          size="small"
+                          color="primary"
+                          sx={{ ml: 1, fontSize: '0.7rem' }}
+                        />
+                      )}
+                    </Typography>
+                    <Typography variant="body1" color="text.secondary">
+                      {edu.school} · {edu.major}
+                    </Typography>
+                    {edu.researchDirection && (
+                      <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+                        {t.researchDirection}: {edu.researchDirection}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ textAlign: isMobile ? 'left' : 'right', mt: isMobile ? 1 : 0 }}>
+                    <Typography variant="body2" color="text.secondary">
+                      {edu.location}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {edu.period}
+                      {edu.isInProgress && edu.expectedGraduation && ` (${t.expected} ${edu.expectedGraduation})`}
+                    </Typography>
+                  </Box>
+                </Box>
+                {edu.gpa && (
+                  <Typography variant="body2" sx={{ mt: 1 }}>
+                    {t.gpa}: <strong>{edu.gpa}</strong>
+                  </Typography>
+                )}
+                {edu.honors && edu.honors.length > 0 && (
+                  <Box sx={{ mt: 1 }}>
+                    <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 0.5 }}>
+                      {t.honors}:
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                      {edu.honors.map((honor, i) => (
+                        <Chip key={i} label={honor} size="small" color="primary" />
+                      ))}
+                    </Box>
+                  </Box>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </Stack>
+      </Box>
+
       {/* 获奖经历 */}
       {data.awards.length > 0 && (
         <>
           <Divider sx={{ my: 3 }} />
-          <Box>
+          <Box sx={{ mb: 4 }}>
             <Typography
               variant="h5"
               sx={{
