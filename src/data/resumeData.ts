@@ -223,7 +223,7 @@ export const resumeDataZh: ResumeData = {
       technologies: ['React', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
         '提出并实施one-time token机制，进一步提高系统安全性',
-        '基于IP Audit + IOvation的智能触发机制减少不必要的API调用，为公司降低70%的reCAPTCHA月度成本',
+        '提出基于IP Audit + IOvation的智能触发机制减少不必要的API调用，为公司降低70%的reCAPTCHA月度成本',
       ],
     },
     {
@@ -421,7 +421,7 @@ export const resumeDataEn: ResumeData = {
       technologies: ['React', 'Angular', 'TypeScript', '.NET', 'Web API', 'TeamCity', 'Git'],
       highlights: [
         'Proposed and implemented one-time token mechanism to further enhance system security',
-        'Reduced unnecessary API calls by 70% through intelligent trigger mechanism based on IP Audit + IOvation, cutting reCAPTCHA monthly costs by 70%',
+        'Proposed and reduced unnecessary API calls by 70% through intelligent trigger mechanism based on IP Audit + IOvation, cutting reCAPTCHA monthly costs by 70%',
       ],
     },
     {
