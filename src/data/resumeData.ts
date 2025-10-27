@@ -136,7 +136,7 @@ export const resumeDataZh: ResumeData = {
       isInProgress: true,
       expectedGraduation: '2026.01',
       researchDirection: '大数据商务分析',
-      gpa: '',
+      gpa: '3.68',
       honors: ['学科总成绩班级第一，专业年级前三'],
     },
     {
@@ -334,7 +334,7 @@ export const resumeDataEn: ResumeData = {
       isInProgress: true,
       expectedGraduation: 'Jan 2026',
       researchDirection: 'Big Data Business Analytics',
-      gpa: '',
+      gpa: '3.68',
       honors: ['Top 1 in class, Top 3 in department'],
     },
     {

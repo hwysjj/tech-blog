@@ -333,7 +333,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             </Link>
             <Text style={styles.sidebarText}>{data.contact.phone}</Text>
             {data.contact.wechat && (
-              <Text style={styles.sidebarText}>微信: {data.contact.wechat}</Text>
+              <Text style={styles.sidebarText}>Wechat: {data.contact.wechat}</Text>
             )}
             <Text style={styles.sidebarText}>{data.contact.address}</Text>
             {data.contact.github && (
