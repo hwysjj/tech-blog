@@ -23,17 +23,27 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <Layout>
-          <Suspense fallback={<LoadingFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/post/:slug" element={<PostDetail />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </Layout>
+        <Suspense fallback={<LoadingFallback />}>
+          <Routes>
+            {/* Resume page without Layout */}
+            <Route path="/resume" element={<Resume />} />
+
+            {/* Other pages with Layout */}
+            <Route
+              path="*"
+              element={
+                <Layout>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/post/:slug" element={<PostDetail />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Layout>
+              }
+            />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   );
