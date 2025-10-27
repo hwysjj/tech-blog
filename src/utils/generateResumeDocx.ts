@@ -5,14 +5,11 @@ import {
   TextRun,
   HeadingLevel,
   AlignmentType,
-  UnderlineType,
   BorderStyle,
   Table,
   TableRow,
   TableCell,
   WidthType,
-  VerticalAlign,
-  ShadingType,
   ImageRun,
 } from 'docx';
 import type { ResumeData } from '../data/resumeData';
@@ -102,8 +99,6 @@ const labelsEn: Labels = {
 };
 
 const PRIMARY_COLOR = '2C3E50';
-const SIDEBAR_BG = '34495E';
-const SIDEBAR_TEXT = 'FFFFFF';
 
 export async function generateResumeDocx(
   data: ResumeData,
@@ -136,6 +131,7 @@ export async function generateResumeDocx(
               width: 120,
               height: 120,
             },
+            type: 'png',
           }),
         ],
         spacing: { after: 200 },
@@ -417,8 +413,8 @@ export async function generateResumeDocx(
     children.push(
       new Paragraph({
         children: [
-          new TextRun({ text: `${work.company} | ${work.location}`, italic: true }),
-          new TextRun({ text: ` | ${work.period}`, italic: true }),
+          new TextRun({ text: `${work.company} | ${work.location}`, italics: true }),
+          new TextRun({ text: ` | ${work.period}`, italics: true }),
         ],
         spacing: { after: 100 },
       })
@@ -490,8 +486,8 @@ export async function generateResumeDocx(
     children.push(
       new Paragraph({
         children: [
-          new TextRun({ text: `${t.role}: ${project.role}`, italic: true }),
-          new TextRun({ text: ` | ${project.period}`, italic: true }),
+          new TextRun({ text: `${t.role}: ${project.role}`, italics: true }),
+          new TextRun({ text: ` | ${project.period}`, italics: true }),
         ],
         spacing: { after: 100 },
       })
@@ -571,8 +567,8 @@ export async function generateResumeDocx(
     children.push(
       new Paragraph({
         children: [
-          new TextRun({ text: `${edu.school} · ${edu.major}`, italic: true }),
-          new TextRun({ text: ` | ${edu.location} | ${periodText}`, italic: true }),
+          new TextRun({ text: `${edu.school} · ${edu.major}`, italics: true }),
+          new TextRun({ text: ` | ${edu.location} | ${periodText}`, italics: true }),
         ],
         spacing: { after: 50 },
       })
