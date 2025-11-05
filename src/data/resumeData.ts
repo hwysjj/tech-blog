@@ -122,7 +122,7 @@ export const resumeDataZh: ResumeData = {
   jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `拥有逾十年资深前端与全栈开发经验，具备深厚技术积淀与系统级架构视野。精通 React、Angular 等主流框架，并熟练运用 C#、Node.js、Python 构建高性能应用。擅长大型 Web 系统架构设计、性能调优与工程化体系建设，致力于通过 Jenkins、TeamCity、Azure 等 DevOps 工具链驱动代码质量与交付效率的持续提升。拥有丰富的跨国团队协作经验，善于在复杂项目中推动决策、确保项目成功落地。`,
+  personalSummary: `拥有逾十年资深前端与全栈开发经验，具备深厚技术积淀与系统级架构视野。精通 React、Angular 等主流框架，并熟练运用 C#、Node.js构建高性能应用。擅长大型 Web 系统架构设计、性能调优与工程化体系建设，致力于通过 Jenkins、TeamCity、Azure 等 DevOps 工具链驱动代码质量与交付效率的持续提升。拥有丰富的跨国团队协作经验，善于在复杂项目中推动决策、确保项目成功落地。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -165,7 +165,7 @@ export const resumeDataZh: ResumeData = {
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
         '通过 RESTful API 集成后端服务，同时参与 .NET WebAPI 接口编写与联调，完善前后端数据交互流程',
         '与 DevOps 团队协作推进 CI/CD 流程建设（Jenkins / TeamCity）以及本地服务器到 Azure 云端的迁移工作，支持自动化构建、测试与发布',
-        '建立前端单元测试体系，使用 Jest / Jasmine / Karma 等工具，确保关键模块 UT 覆盖率达 80% 以上',
+        '建立前端单元测试体系，使用 Jest / Jasmine / Karma 等工具，确保关键模块 UT 覆盖率达 90% 以上',
         '作为项目 Web 前端主要沟通与推动负责人，负责跨团队需求澄清、进度跟踪与问题闭环，确保前后端协作顺畅高效',
         '参与代码评审与技术分享，指导新人培训，持续提升团队整体技术能力',
         '负责多个遗留系统的日常维护、性能优化与版本升级，降低技术债务与运维风险',
@@ -320,7 +320,7 @@ export const resumeDataEn: ResumeData = {
   jobIntention: 'Web Frontend Engineer | Full Stack Engineer | .NET',
 
   // Personal Summary (150-200 words)
-  personalSummary: `Over 10 years of front-end and full-stack development experience, proficient in React, Angular and other mainstream frameworks, familiar with C#, Node.js, Python technology stacks. Expertise in Web architecture design and performance optimization with system-level engineering construction experience. Focus on continuous improvement of code quality and delivery process, skilled in using Jenkins, TeamCity, Azure and other DevOps tools to achieve continuous integration and deployment. Long-term work experience in cross-national team environments with ability to collaborate efficiently and drive complex projects to completion.`,
+  personalSummary: `Over 10 years of front-end and full-stack development experience, proficient in React, Angular and other mainstream frameworks, familiar with C#, Node.js technology stacks. Expertise in Web architecture design and performance optimization with system-level engineering construction experience. Focus on continuous improvement of code quality and delivery process, skilled in using Jenkins, TeamCity, Azure and other DevOps tools to achieve continuous integration and deployment. Long-term work experience in cross-national team environments with ability to collaborate efficiently and drive complex projects to completion.`,
 
   // Education (Master first, Bachelor second)
   education: [
@@ -363,7 +363,7 @@ export const resumeDataEn: ResumeData = {
         'Drove responsive web development to unify user experience across PC, mobile, and Android / iOS WebView platforms',
         'Participated in backend .NET WebAPI development and integration, optimizing frontend-backend data interaction',
         'Collaborated with DevOps team to advance CI/CD pipeline construction (Jenkins / TeamCity) and on-premises to Azure cloud migration, supporting automated build, testing, and deployment',
-        'Established frontend unit testing framework using Jest / Jasmine / Karma, ensuring 80%+ UT coverage for critical modules',
+        'Established frontend unit testing framework using Jest / Jasmine / Karma, ensuring 90%+ UT coverage for critical modules',
         'Served as primary Web frontend communication and project lead, responsible for cross-team requirement clarification, progress tracking, and issue resolution, ensuring smooth frontend-backend collaboration',
         'Participated in code reviews and technical sharing, mentored new team members, continuously improving overall team capability',
         'Maintained multiple legacy systems including daily maintenance, performance optimization, and version upgrades, reducing technical debt and operational risks',
