@@ -122,7 +122,7 @@ export const resumeDataZh: ResumeData = {
   jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `具备十年以上的前端与全栈开发经验，精通 React、Angular 等主流框架，熟悉 C#、Node.js、Python 技术栈。擅长 Web 架构设计与性能优化，具备系统级工程化建设经验。注重代码质量与交付流程持续改进，熟练运用 Jenkins、TeamCity、Azure 等 DevOps 工具实现持续集成与部署。长期在跨国团队环境下工作，能够高效协作、推动复杂项目落地。`,
+  personalSummary: `拥有逾十年资深前端与全栈开发经验，具备深厚技术积淀与系统级架构视野。精通 React、Angular 等主流框架，并熟练运用 C#、Node.js、Python 构建高性能应用。擅长大型 Web 系统架构设计、性能调优与工程化体系建设，致力于通过 Jenkins、TeamCity、Azure 等 DevOps 工具链驱动代码质量与交付效率的持续提升。拥有丰富的跨国团队协作经验，善于在复杂项目中推动决策、确保项目成功落地。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -154,12 +154,12 @@ export const resumeDataZh: ResumeData = {
   // 工作经历
   workExperience: [
     {
-      position: '软件开发工程师主管',
+      position: 'Lead Engineer',
       company: '碧点（上海）软件技术有限公司',
       location: '上海',
       period: '2015.08 - 至今',
       responsibilities: [
-        '晋升轨迹：软件开发工程师（2015.08-2018.02）→ 高级工程师（2018.03-2021.03）→ 主管（2021.04至今）',
+        '晋升轨迹：软件开发工程师（2015.08-2018.02）→ 高级工程师（2018.03-2021.03）→ Lead Engineer（2021.04至今）',
         '负责公司 Web 前端整体架构设计与技术选型，主导基于 React / Angular + TypeScript 的开发与重构',
         '基于 Webpack + Module Federation 搭建微前端架构，提升系统的模块化与可复用性',
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
@@ -200,7 +200,7 @@ export const resumeDataZh: ResumeData = {
       highlights: [
         '主导Web前端从本地服务器迁移至Azure云端，实现同域名支持新老系统并存，解决IPv6兼容性、URL冲突等技术难题',
         '实现多租户架构，通过路由与配置隔离机制，使不同产品用户自动访问对应云端环境',
-        '单元测试覆盖率达80%以上，确保系统稳定可靠',
+        '成功完成数千万用户的平滑迁移上线，项目运行至今因前端代码导致的生产环境缺陷仅个位数，其中Critical级别缺陷为零，展现卓越的工程质量与系统稳定性',
       ],
     },
     {
@@ -398,7 +398,7 @@ export const resumeDataEn: ResumeData = {
       highlights: [
         'Led web frontend migration from on-premises servers to Azure cloud, enabling coexistence of new and legacy systems under the same domain, solving IPv6 compatibility and URL conflict challenges',
         'Implemented multi-tenant architecture with routing and configuration isolation, enabling automatic access to corresponding cloud environments for different product users',
-        'Achieved 80%+ unit test coverage to ensure system stability and reliability',
+        'Successfully delivered seamless migration serving tens of millions of users with exceptional production quality: only single-digit frontend defects post-launch, with zero critical issues, demonstrating outstanding engineering excellence and system reliability',
       ],
     },
     {
