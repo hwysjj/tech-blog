@@ -27,11 +27,26 @@ Font.register({
 });
 
 // Allow proper wrapping for CJK text blocks inside PDF paragraphs
+// Also enable word breaking for mixed Chinese-English text
 Font.registerHyphenationCallback((word) => {
   if (!word) return [];
+
+  // For Chinese characters, break by character
   if (/[\u4e00-\u9fff]/.test(word)) {
     return word.split('');
   }
+
+  // For English words, allow breaking at ANY length to prevent orphan words
+  // This is crucial for mixed Chinese-English text
+  if (/[a-zA-Z]/.test(word)) {
+    // Split into smaller chunks (every 6 chars) to allow flexible wrapping
+    const chunks = [];
+    for (let i = 0; i < word.length; i += 6) {
+      chunks.push(word.substring(i, i + 6));
+    }
+    return chunks;
+  }
+
   return [word];
 });
 
@@ -81,15 +96,17 @@ const styles = StyleSheet.create({
   },
   sidebarText: {
     fontSize: 8,
-    lineHeight: 1.4,
+    lineHeight: 1.5,
     marginBottom: 4,
     color: colors.sidebarText,
+    maxWidth: '100%',
   },
   sidebarLink: {
     fontSize: 8,
     color: colors.sidebarText,
     textDecoration: 'none',
     marginBottom: 4,
+    maxWidth: '100%',
   },
   sidebarDivider: {
     borderBottomWidth: 0.5,
@@ -114,6 +131,7 @@ const styles = StyleSheet.create({
     maxWidth: 595 - resumeTheme.pdf.sidebarWidth,
     padding: '30 25 30 25',
     backgroundColor: 'white',
+    overflow: 'hidden',
   },
   jobIntention: {
     fontSize: 18,
@@ -139,33 +157,40 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 5,
+    alignItems: 'flex-start',
   },
   subsectionTitle: {
     fontSize: 11,
     fontWeight: 'bold',
     color: colors.textPrimary,
+    maxWidth: '100%',
   },
   subsectionSubtitle: {
     fontSize: 10,
     color: colors.textSecondary,
     marginBottom: 3,
+    maxWidth: '100%',
   },
   subsectionDate: {
     fontSize: 9,
     color: colors.textSecondary,
     textAlign: 'right',
+    flexShrink: 0,
+    marginLeft: 10,
   },
   bodyText: {
-    fontSize: 10,
-    lineHeight: 1.5,
+    fontSize: 9,
+    lineHeight: 1.6,
     color: colors.textPrimary,
     marginBottom: 3,
     textAlign: 'justify',
+    maxWidth: '100%',
   },
   summaryText: {
-    fontSize: 10,
-    lineHeight: 1.5,
+    fontSize: 9,
+    lineHeight: 1.6,
     color: colors.textPrimary,
+    maxWidth: '100%',
   },
   bulletList: {
     marginLeft: 10,
@@ -175,15 +200,20 @@ const styles = StyleSheet.create({
   bulletItem: {
     flexDirection: 'row',
     marginBottom: 3,
+    alignItems: 'flex-start',
   },
   bullet: {
-    width: 5,
+    width: 8,
     fontSize: 10,
+    marginRight: 4,
+    flexShrink: 0,
   },
   bulletText: {
     flex: 1,
-    fontSize: 10,
-    lineHeight: 1.5,
+    fontSize: 9,
+    lineHeight: 1.6,
+    flexShrink: 1,
+    maxWidth: '100%',
   },
   labelBold: {
     fontSize: 9,
@@ -192,30 +222,34 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
   },
   chip: {
-    fontSize: 8,
+    fontSize: 7,
     backgroundColor: '#f0f0f0',
     borderRadius: 3,
     padding: '2 5',
     marginRight: 4,
     marginBottom: 4,
+    flexShrink: 0,
   },
   chipContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginTop: 3,
     marginBottom: 5,
+    maxWidth: '100%',
   },
   card: {
     marginBottom: 10,
     padding: '6 8',
     backgroundColor: '#fafafa',
     borderRadius: 4,
+    maxWidth: '100%',
   },
   summaryCard: {
     marginBottom: 10,
     padding: '6 8',
     backgroundColor: '#fafafa',
     borderRadius: 4,
+    maxWidth: '100%',
   },
   badge: {
     fontSize: 7,
@@ -236,6 +270,22 @@ interface ResumePDFProps {
   data: ResumeData;
   language: 'zh' | 'en';
 }
+
+// Helper function for text hyphenation to handle mixed Chinese-English content
+const hyphenateText = (word: string): string[] => {
+  if (!word) return [];
+  // For Chinese characters, break by character
+  if (/[\u4e00-\u9fff]/.test(word)) return word.split('');
+  // For English words, split into smaller chunks to allow flexible wrapping
+  if (/[a-zA-Z]/.test(word)) {
+    const chunks = [];
+    for (let i = 0; i < word.length; i += 6) {
+      chunks.push(word.substring(i, i + 6));
+    }
+    return chunks;
+  }
+  return [word];
+};
 
 const ResumePDF = ({ data, language }: ResumePDFProps) => {
   const labels = {
@@ -408,7 +458,9 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
           <View>
             <Text style={styles.sectionTitle}>{t.personalSummary}</Text>
             <View style={styles.summaryCard}>
-              <Text style={styles.summaryText}>{data.personalSummary}</Text>
+              <Text style={styles.summaryText} hyphenationCallback={hyphenateText}>
+                {data.personalSummary}
+              </Text>
             </View>
           </View>
 
@@ -420,11 +472,11 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             {data.workExperience.map((work, index) => (
               <View key={index} style={styles.card}>
                 <View style={styles.subsectionHeader}>
-                  <View style={{ flex: 1 }}>
+                  <View style={{ flex: 1, minWidth: 0 }}>
                     <Text style={styles.subsectionTitle}>{work.position}</Text>
                     <Text style={styles.subsectionSubtitle}>{work.company}</Text>
                   </View>
-                  <View>
+                  <View style={{ flexShrink: 0 }}>
                     <Text style={styles.subsectionDate}>{work.location}</Text>
                     <Text style={styles.subsectionDate}>{work.period}</Text>
                   </View>
@@ -436,7 +488,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                     {work.responsibilities.map((resp, i) => (
                       <View key={i} style={styles.bulletItem}>
                         <Text style={styles.bullet}>•</Text>
-                        <Text style={styles.bulletText}>{resp}</Text>
+                        <Text style={styles.bulletText} hyphenationCallback={hyphenateText}>{resp}</Text>
                       </View>
                     ))}
                   </View>
@@ -449,7 +501,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                       {work.achievements.map((achievement, i) => (
                         <View key={i} style={styles.bulletItem}>
                           <Text style={styles.bullet}>•</Text>
-                          <Text style={styles.bulletText}>{achievement}</Text>
+                          <Text style={styles.bulletText} hyphenationCallback={hyphenateText}>{achievement}</Text>
                         </View>
                       ))}
                     </View>
@@ -467,16 +519,18 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             {data.projects.map((project, index) => (
               <View key={index} style={styles.card}>
                 <View style={styles.subsectionHeader}>
-                  <View style={{ flex: 1 }}>
+                  <View style={{ flex: 1, minWidth: 0 }}>
                     <Text style={styles.subsectionTitle}>{project.name}</Text>
                     <Text style={styles.subsectionSubtitle}>
                       {t.role}: {project.role}
                     </Text>
                   </View>
-                  <Text style={styles.subsectionDate}>{project.period}</Text>
+                  <View style={{ flexShrink: 0 }}>
+                    <Text style={styles.subsectionDate}>{project.period}</Text>
+                  </View>
                 </View>
 
-                <Text style={styles.bodyText}>{project.description}</Text>
+                <Text style={styles.bodyText} hyphenationCallback={hyphenateText}>{project.description}</Text>
 
                 <View style={{ marginTop: 3 }}>
                   <Text style={styles.labelBold}>{t.technologies}:</Text>
@@ -494,7 +548,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                       {project.highlights.map((highlight, i) => (
                         <View key={i} style={styles.bulletItem}>
                           <Text style={styles.bullet}>•</Text>
-                          <Text style={styles.bulletText}>{highlight}</Text>
+                          <Text style={styles.bulletText} hyphenationCallback={hyphenateText}>{highlight}</Text>
                         </View>
                       ))}
                     </View>
@@ -512,7 +566,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
             {data.education.map((edu, index) => (
               <View key={index} style={styles.card}>
                 <View style={styles.subsectionHeader}>
-                  <View style={{ flex: 1 }}>
+                  <View style={{ flex: 1, minWidth: 0 }}>
                     <Text style={styles.subsectionTitle}>
                       {edu.degree}
                       {edu.isInProgress && ` (${t.inProgress})`}
@@ -526,7 +580,7 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                       </Text>
                     )}
                   </View>
-                  <View>
+                  <View style={{ flexShrink: 0 }}>
                     <Text style={styles.subsectionDate}>{edu.location}</Text>
                     <Text style={styles.subsectionDate}>
                       {edu.period}
@@ -560,14 +614,16 @@ const ResumePDF = ({ data, language }: ResumePDFProps) => {
                 {data.awards.map((award, index) => (
                   <View key={index} style={styles.card}>
                     <View style={styles.subsectionHeader}>
-                      <View style={{ flex: 1 }}>
+                      <View style={{ flex: 1, minWidth: 0 }}>
                         <Text style={styles.subsectionTitle}>
                           {award.name}
                           {award.level && <Text style={styles.badge}> {award.level}</Text>}
                         </Text>
                         <Text style={styles.subsectionSubtitle}>{award.issuer}</Text>
                       </View>
-                      <Text style={styles.subsectionDate}>{award.date}</Text>
+                      <View style={{ flexShrink: 0 }}>
+                        <Text style={styles.subsectionDate}>{award.date}</Text>
+                      </View>
                     </View>
                   </View>
                 ))}

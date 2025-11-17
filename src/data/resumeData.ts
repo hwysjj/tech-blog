@@ -122,7 +122,7 @@ export const resumeDataZh: ResumeData = {
   jobIntention: '高级Web前端工程师 ｜ 全栈工程师 ｜ .NET',
 
   // 个人简介/自我评价（150-200字）
-  personalSummary: `拥有逾十年资深前端与全栈开发经验，具备深厚技术积淀与系统级架构视野。精通 React、Angular 等主流框架，并熟练运用 C#、Node.js构建高性能应用。擅长大型 Web 系统架构设计、性能调优与工程化体系建设，致力于通过 Jenkins、TeamCity、Azure 等 DevOps 工具链驱动代码质量与交付效率的持续提升。拥有丰富的跨国团队协作经验，善于在复杂项目中推动决策、确保项目成功落地。`,
+  personalSummary: `拥有逾十年资深前端与全栈开发经验，具备深厚技术积淀与系统级架构视野。精通React、Angular等主流框架，并熟练运用C#、Node.js构建高性能应用。擅长大型Web系统架构设计、性能调优与工程化体系建设，致力于通过Jenkins、TeamCity、Azure等DevOps工具链驱动代码质量与交付效率的持续提升。拥有丰富的跨国团队协作经验，善于在复杂项目中推动决策、确保项目成功落地。`,
 
   // 教育背景（硕士在上，本科在下）
   education: [
@@ -157,9 +157,9 @@ export const resumeDataZh: ResumeData = {
       position: 'Lead Engineer',
       company: '碧点（上海）软件技术有限公司',
       location: '上海',
-      period: '2015.08 - 至今',
+      period: '2015.08 - 2025.11',
       responsibilities: [
-        '晋升轨迹：软件开发工程师（2015.08-2018.02）→ 高级工程师（2018.03-2021.03）→ Lead Engineer（2021.04至今）',
+        '晋升轨迹：软件开发工程师（2015.08-2018.02）→ 高级工程师（2018.03-2021.03）→ Lead Engineer（2021.04-2025.11）',
         '负责公司 Web 前端整体架构设计与技术选型，主导基于 React / Angular + TypeScript 的开发与重构',
         '基于 Webpack + Module Federation 搭建微前端架构，提升系统的模块化与可复用性',
         '推进部分响应式页面开发，统一 PC、移动端及 Android / iOS WebView 的使用体验',
@@ -194,7 +194,7 @@ export const resumeDataZh: ResumeData = {
     {
       name: 'Walmart/Greedot Migration',
       role: 'Web前端技术负责人',
-      period: '2024.02 - 现在',
+      period: '2024.02 - 2025.11',
       description: '主导Walmart和Greedot两大金融系统向BaaS平台的Web前端迁移，负责技术选型、架构设计与实施落地。',
       technologies: ['React', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
@@ -355,9 +355,9 @@ export const resumeDataEn: ResumeData = {
       position: 'Software Engineering Lead',
       company: 'Bidian (Shanghai) Software Technology Co., Ltd.',
       location: 'Shanghai',
-      period: 'Aug 2015 - Present',
+      period: 'Aug 2015 - Nov 2025',
       responsibilities: [
-        'Career Progression: Software Engineer (Mar Aug - Feb 2018) → Senior Engineer (Mar 2018 - Mar 2021) → Manager (Apr 2021 - Present)',
+        'Career Progression: Software Engineer (Mar Aug - Feb 2018) → Senior Engineer (Mar 2018 - Mar 2021) → Manager (Apr 2021 - Nov 2025)',
         'Responsible for overall Web frontend architecture design and technology selection, leading development and refactoring based on React / Angular + TypeScript',
         'Built micro-frontend architecture using Webpack + Module Federation, enhancing system modularity and reusability',
         'Drove responsive web development to unify user experience across PC, mobile, and Android / iOS WebView platforms',
@@ -392,7 +392,7 @@ export const resumeDataEn: ResumeData = {
     {
       name: 'Walmart/Greedot Migration',
       role: 'Frontend Tech Lead',
-      period: 'Feb 2024 - Present',
+      period: 'Feb 2024 - Nov 2025',
       description: 'Led web frontend migration for Walmart and Greedot financial systems to BaaS platform, responsible for technology selection, architecture design, and implementation.',
       technologies: ['React', 'Angular', 'TypeScript', 'Karma', 'Jasmine', 'Jest', 'MUI', 'Webpack', '.NET', 'TeamCity', 'Git', 'Azure Front Door'],
       highlights: [
